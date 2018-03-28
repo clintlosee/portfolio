@@ -74,10 +74,10 @@ const FooterSegment = () => {
                     </Grid.Row>
                     <Grid.Row>
                         <Grid.Column width={16}>
-                            <Segment mini inverted textAlign="center">
+                            <Segment  inverted textAlign="center">
                                 <Divider fitted />
                                 <Divider horizontal inverted>
-                                    Built with Gatsby
+                                    Lovingly Built with React &amp; Gatsby
                                 </Divider>
                             </Segment>
                         </Grid.Column>
