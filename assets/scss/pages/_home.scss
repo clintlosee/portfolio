@@ -1,0 +1,11 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.tester {
+    color: red;
+    
+    @include media('>phone', '<=tablet') { 
+        color: blue;
+    }
+}

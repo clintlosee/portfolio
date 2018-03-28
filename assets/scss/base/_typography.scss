@@ -1,0 +1,53 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to typography.
+// -----------------------------------------------------------------------------
+
+$montserrat: 'Montserrat', Helvetica, Arial, sans-serif !default;
+$roboto: 'Roboto', sans-serif !default;
+
+
+%montserrat-reg {
+    font-family: $montserrat;
+    font-weight: 400;
+}
+%montserrat-bold {
+    font-family: $montserrat;
+    font-weight: 700;
+}
+%roboto-light {
+    font-family: $roboto;
+    font-weight: 300;
+}
+%roboto-reg {
+    font-family: $roboto;
+    font-weight: 400;
+}
+%roboto-bold {
+    font-family: $roboto;
+    font-weight: 700;
+}
+
+
+//h1, h2, h3, h4, h5, h6 {
+//    @extend %montserrat-reg;
+//}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #4a4a4a;
+}
+
+a {
+    color: $brandOrange;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    text-decoration: none;
+    
+    &:hover {
+        color: #1c09b2;
+        text-decoration: none;
+    }
+}

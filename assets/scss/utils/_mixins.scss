@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/*
+ * Size
+ * Example: @include size(100%); // returns width: 100%; height: 100%;
+ * Example: @include size(100%, 1px); // returns width: 100%; height: 1px;
+ */
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+/*
+ * Vendor prefix
+ * Example: @include prefix(transform, rotate(42deg), webkit moz ms o);
+ */
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+    @if $vendors {
+        @each $vendor in $vendors {
+            #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+    }
+    #{$property}: #{$value};
+}
