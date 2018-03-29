@@ -2975,6 +2975,12 @@ gatsby-module-loader@^1.0.7:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
+gatsby-plugin-google-analytics@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.25.tgz#e867e8257e8391fb2823c3e78fcc7f23074fc3cc"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-google-fonts@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-fonts/-/gatsby-plugin-google-fonts-0.0.3.tgz#36a09e7ed3b795b0a81e9404b4c487e0fdfa46ab"

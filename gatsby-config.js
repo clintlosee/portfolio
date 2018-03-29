@@ -12,6 +12,15 @@ module.exports = {
                     `source sans pro\:200,200i,400,700`
                 ]
             }
-        }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-116645722-1",
+                head: false,
+                anonymize: true,
+                respectDNT: true,
+            },
+        },
     ],
 }
