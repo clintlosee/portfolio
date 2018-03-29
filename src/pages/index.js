@@ -14,6 +14,8 @@ import {
     Segment,
     Visibility
 } from 'semantic-ui-react';
+import Fade from 'react-reveal/Fade';
+import LightSpeed from 'react-reveal/LightSpeed';
 import portfolioItems from '../components/portfolioItems';
 
 const style = {
@@ -41,16 +43,18 @@ class IndexPage extends Component {
         return portfolioItems.map(item => {
             return (
                 <Grid.Column key={item.header}>
-                    <Segment>
-                        <Card fluid as="a" href={item.link} target={item.target}>
-                            <Image src={item.image} style={{ marginBottom: 0 }} />
-                            <Card.Content>
-                                <Card.Header>{item.header}</Card.Header>
-                                <Card.Meta>Technologies: {item.tech}</Card.Meta>
-                                <Card.Description>{item.description}</Card.Description>
-                            </Card.Content>
-                        </Card>
-                    </Segment>
+                    <Fade bottom>
+                        <Segment>
+                            <Card fluid as="a" href={item.link} target={item.target}>
+                                <Image src={item.image} style={{ marginBottom: 0 }} />
+                                <Card.Content>
+                                    <Card.Header>{item.header}</Card.Header>
+                                    <Card.Meta>Technologies: {item.tech}</Card.Meta>
+                                    <Card.Description>{item.description}</Card.Description>
+                                </Card.Content>
+                            </Card>
+                        </Segment>
+                    </Fade>
                 </Grid.Column>
             );
         });
@@ -91,16 +95,19 @@ class IndexPage extends Component {
                                 marginBottom: '2em'
                             }}
                         />
-                        <Header
-                            as="h1"
-                            content="CLINT LOSEE"
-                            inverted
-                            style={{
-                                fontSize: '4em',
-                                fontWeight: 'bold',
-                                marginBottom: '1em'
-                            }}
-                        />
+                        <LightSpeed left>
+                            <Header
+                                as="h1"
+                                content="CLINT LOSEE"
+                                inverted
+                                style={{
+                                    fontSize: '4em',
+                                    fontWeight: 'bold',
+                                    marginBottom: '1em',
+                                    textShadow: '1px 2px 4px #222'
+                                }}
+                            />
+                        </LightSpeed>
                         <Header
                             as="h2"
                             content="Web Developer &amp; Digital Media Professional"

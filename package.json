@@ -9,6 +9,7 @@
     "gatsby-plugin-google-analytics": "^1.0.25",
     "gatsby-plugin-google-fonts": "^0.0.3",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "react-reveal": "^1.2.1",
     "semantic-ui-css": "^2.2.12",
     "semantic-ui-react": "^0.75.1"
   },
