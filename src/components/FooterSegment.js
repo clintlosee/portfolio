@@ -23,17 +23,17 @@ const FooterSegment = () => {
                         <Grid.Column width={3}>
                             <Header inverted as="h3" content="Links" />
                             <List link inverted>
-                                <List.Item as="a">
+                                <List.Item>
                                     <Link className="Home" to="/">
                                         Home
                                     </Link>
                                 </List.Item>
-                                <List.Item as="a">
+                                <List.Item>
                                     <Link className="about" to="/about">
                                         About
                                     </Link>
                                 </List.Item>
-                                <List.Item as="a">
+                                <List.Item>
                                     <Link className="contact" to="/contact">
                                         Contact
                                     </Link>
