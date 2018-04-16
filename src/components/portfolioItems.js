@@ -36,7 +36,7 @@ export default [
         tech: 'Node, Express, MongoDB',
         description: 'A restaurant listing app built with Node, Express and MongoDB that allows for reviews and new store listings.',
         image: '/static/assets/images/portfolio/deliciousapp-folio.png',
-        link: 'https://delicious-store-app-pfymqvxbte.now.sh/',
+        link: 'https://delicious-store-app-uddygzwzhz.now.sh/',
         target: '_blank'
     },
     {
