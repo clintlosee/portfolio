@@ -60,7 +60,7 @@ export default [
         tech: 'React',
         description: 'A simple YouTube video search app built with React',
         image: '/static/assets/images/portfolio/react-youtube-folio.jpg',
-        link: 'http://projects.clintlosee.com/React-Youtube/',
+        link: 'https://clintlosee-react-youtube.netlify.com/',
         target: '_blank'
     },
     {
