@@ -26,7 +26,7 @@ export default [
     {
         header: 'RC Willey Mobile App',
         tech: 'React, React Native',
-        description: 'RC Willey mobile app published on iOS and Android.',
+        description: 'RC Willey mobile app published on iOS and Android built with React Native.',
         image: '/static/assets/images/portfolio/reactnative-rcw-folio.jpg',
         link: '/',
         target: '_blank'
@@ -91,7 +91,7 @@ export default [
     {
         header: 'Title West Title Company',
         tech: 'JS, jQuery, HTML, CSS3, PHP',
-        description: 'This is the TW website',
+        description: 'TW company website rebuilt to update and retain control of content.',
         image: '/static/assets/images/portfolio/titlewest-folio.png',
         link: 'http://www.titlewest.com/',
         target: '_blank'
@@ -99,9 +99,9 @@ export default [
     {
         header: 'Clint Losee Photography',
         tech: 'HTML, CSS, JS, jQuery',
-        description: 'A basic HTML/CSS/JS website used for my first photo website.',
+        description: 'A basic HTML/CSS/JS website used for my first photo website. Very old! Check out clintlosee.com for the new stuff!',
         image: '/static/assets/images/portfolio/clintloseephoto-folio.png',
-        link: 'http://clphotov1.pancakeapps.com/',
+        link: 'https://hardcore-noyce-9b6d0e.netlify.com/',
         target: '_blank'
     },
 ];

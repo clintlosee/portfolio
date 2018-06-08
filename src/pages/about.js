@@ -22,7 +22,7 @@ const AboutPage = () => (
             <Header size="huge">About Me</Header>
         </Divider>
 
-        <Segment raised padded color="orange" textAlign="justified" style={styles.intro}>
+        <Segment raised padded color="orange" textAlign="left" style={styles.intro}>
             <Header size="large" textAlign='center'>Hi, I&#39;m Clint</Header>
             <p>
                 I am a Front End Web Developer from Utah with a Bachelor&#39;s Degree in Digital Media with an emphasis

@@ -43,18 +43,16 @@ class IndexPage extends Component {
         return portfolioItems.map(item => {
             return (
                 <Grid.Column key={item.header}>
-                    <Fade bottom>
-                        <Segment>
-                            <Card fluid as="a" href={item.link} target={item.target}>
-                                <Image src={item.image} style={{ marginBottom: 0 }} />
-                                <Card.Content>
-                                    <Card.Header>{item.header}</Card.Header>
-                                    <Card.Meta>Technologies: {item.tech}</Card.Meta>
-                                    <Card.Description>{item.description}</Card.Description>
-                                </Card.Content>
-                            </Card>
-                        </Segment>
-                    </Fade>
+                    <Segment>
+                        <Card fluid as="a" href={item.link} target={item.target}>
+                            <Image src={item.image} style={{ marginBottom: 0 }} />
+                            <Card.Content>
+                                <Card.Header>{item.header}</Card.Header>
+                                <Card.Meta>Technologies: {item.tech}</Card.Meta>
+                                <Card.Description>{item.description}</Card.Description>
+                            </Card.Content>
+                        </Card>
+                    </Segment>
                 </Grid.Column>
             );
         });
@@ -91,23 +89,22 @@ class IndexPage extends Component {
                             style={{
                                 fontSize: '1.5em',
                                 fontWeight: 'normal',
-                                marginTop: '3.5em',
-                                marginBottom: '2em'
+                                marginTop: '2em',
+                                marginBottom: '2em',
+                                textShadow: '1px 1px 2px #666'
                             }}
                         />
-                        <LightSpeed left>
-                            <Header
-                                as="h1"
-                                content="CLINT LOSEE"
-                                inverted
-                                style={{
-                                    fontSize: '4em',
-                                    fontWeight: 'bold',
-                                    marginBottom: '1em',
-                                    textShadow: '1px 2px 4px #222'
-                                }}
-                            />
-                        </LightSpeed>
+                        <Header
+                            as="h1"
+                            content="CLINT LOSEE"
+                            inverted
+                            style={{
+                                fontSize: '4em',
+                                fontWeight: 'bold',
+                                marginBottom: '1em',
+                                textShadow: '1px 2px 4px #222'
+                            }}
+                        />
                         <Header
                             as="h2"
                             content="Web Developer &amp; Digital Media Professional"
@@ -115,7 +112,8 @@ class IndexPage extends Component {
                             style={{
                                 fontSize: '1.7em',
                                 fontWeight: 'normal',
-                                marginBottom: '1.5em'
+                                marginBottom: '1.5em',
+                                textShadow: '1px 1px 2px #666'
                             }}
                         />
                         <Button

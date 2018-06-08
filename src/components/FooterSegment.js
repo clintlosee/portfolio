@@ -77,7 +77,7 @@ const FooterSegment = () => {
                             <Segment  inverted textAlign="center">
                                 <Divider fitted />
                                 <Divider horizontal inverted>
-                                    Lovingly Built with React &amp; Gatsby
+                                    Built with React &amp; Gatsby
                                 </Divider>
                             </Segment>
                         </Grid.Column>
