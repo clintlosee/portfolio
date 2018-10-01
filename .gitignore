@@ -95,3 +95,5 @@ node_modules
 *.css.map
 
 .cache
+
+keys.js

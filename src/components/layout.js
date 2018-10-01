@@ -5,7 +5,8 @@ import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import './layout.css'
+import { Welcome } from './Welcome'
+// import './layout.css'
 
 const theme = {
   red: '#FF0000',
@@ -81,6 +82,7 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
           <StyledPage>
             <Inner>
+              <Welcome />
               {children}
             </Inner>
           </StyledPage>
