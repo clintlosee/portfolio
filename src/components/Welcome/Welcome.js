@@ -61,12 +61,13 @@ class Welcome extends Component {
   };
 
   formatWeather = weatherType => {
+    console.log(weatherType)
     let converted = '';
     if (weatherType.toLowerCase().charAt(weatherType.length - 1) === 'y') {
       converted = weatherType.toLowerCase();
     } else if (weatherType.toLowerCase() === 'clear') {
       converted = 'sunny and clear';
-    } else if (weatherType.toLowerCase() === 'raining') {
+    } else if (weatherType.toLowerCase() === 'rain') {
       converted = 'rainy';
     } else if (weatherType.toLowerCase() === 'clouds') {
       converted = 'cloudy';
@@ -86,7 +87,7 @@ class Welcome extends Component {
         ) : (
           <div className="welcome section">
             <h1 className="welcome-intro">
-              I&#39;m a <strong>front-end web developer</strong>,{' '}
+              I&#39;m a <strong>front-end software engineer</strong>,{' '}
               <strong>photographer</strong>,{' '}
               <strong>digital media professional</strong>, &amp;{' '}
               <strong>all-around good person </strong>

@@ -1,13 +1,14 @@
 import React from 'react';
 
 import Layout from '../components/layout'
+import { Welcome } from '../components/Welcome'
 
-const about = () => {
+const welcome = () => {
   return (
     <Layout>
-      <h1>About Gatsby</h1>
+      <Welcome />
     </Layout>
   );
 };
 
-export default about;
+export default welcome;

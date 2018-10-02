@@ -2,28 +2,20 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import { NavBar } from './NavBar'
+
 const HeaderDiv = styled.div`
-  background: rebeccapurple;
-  margin-bottom: 1.5rem;
+  background: none;
+  margin-bottom: 1.5em;
   div {
     margin: 0 auto;
-    max-width: 960px;
-    padding: 1.45rem 1.0875rem;
   }
 `
 
 const Header = ({ siteTitle }) => (
   <HeaderDiv>
     <div>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/"
-          style={{
-            color: 'white',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+      <NavBar siteTitle={siteTitle} />
     </div>
     </HeaderDiv>
 )

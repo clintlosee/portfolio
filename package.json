@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^3.1.2",
     "babel-plugin-styled-components": "^1.8.0",
     "gatsby": "^2.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
@@ -15,6 +16,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.1.0",
     "react-icons-weather": "^1.0.5",
+    "react-responsive": "^5.0.0",
     "styled-components": "^3.4.9"
   },
   "keywords": [

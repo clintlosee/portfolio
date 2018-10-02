@@ -82,7 +82,6 @@ const Layout = ({ children }) => (
           <Header siteTitle={data.site.siteMetadata.title} />
           <StyledPage>
             <Inner>
-              <Welcome />
               {children}
             </Inner>
           </StyledPage>
