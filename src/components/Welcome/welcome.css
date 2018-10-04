@@ -1,16 +1,17 @@
 .welcome {
     display: flex;
     background-color: #FFF;
-    height: 90vh;
+    height: 85vh;
     padding-left: 75px;
     padding-right: 75px;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.welcome-intro {
+  .welcome-intro {
     font-family: "Raleway", sans-serif;
     font-weight: 100;
+    text-align: center;
 }
 
 .welcome-intro strong {
@@ -46,7 +47,7 @@
 
 .main-pic {
     border-radius: 50%;
-    width: 28vw;
+    width: 40vw;
     padding: 20px;
 }
 
@@ -81,11 +82,11 @@
     }
 
     .welcome-intro {
-        padding-top: 15%;
+        order: 2;
     }
 
     .welcome > .main-pic {
-        width: 200px
+        width: 70vw;
     }
 
     .welcome .weatherIcon {

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-import { NavBar } from './NavBar'
+import { NavBar } from './NavBar';
 
 const HeaderDiv = styled.div`
   background: none;
@@ -10,14 +10,12 @@ const HeaderDiv = styled.div`
   div {
     margin: 0 auto;
   }
-`
+`;
 
 const Header = ({ siteTitle }) => (
   <HeaderDiv>
-    <div>
-      <NavBar siteTitle={siteTitle} />
-    </div>
-    </HeaderDiv>
-)
+    <NavBar siteTitle={siteTitle} />
+  </HeaderDiv>
+);
 
-export default Header
+export default Header;

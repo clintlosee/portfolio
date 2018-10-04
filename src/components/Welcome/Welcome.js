@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import WeatherIcon from 'react-icons-weather';
 import styled from 'styled-components';
-import { FaLinkedin, FaGithubSquare, FaEnvelopeSquare, FaFilePdf } from 'react-icons/fa';
+import {
+  FaLinkedin,
+  FaGithubSquare,
+  FaEnvelopeSquare,
+  FaFilePdf
+} from 'react-icons/fa';
 import { appId } from '../../../keys';
 import './welcome.css';
 
@@ -9,7 +14,7 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = `&appid=${appId}`;
 
 const WelcomeButton = styled.button`
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: white;
   color: black;
   border: 2px solid black;
@@ -33,8 +38,19 @@ const WelcomeButton = styled.button`
   @media (max-width: 770px) {
     font-size: 28px;
     width: 100%;
+    margin-bottom: 2em;
   }
 `;
+
+const SocialDiv = styled.div`
+  margin: 20px 0;
+`;
+
+const styles = {
+  weatherIcon: {
+    margin: '0 5px'
+  }
+};
 
 class Welcome extends Component {
   constructor(props) {
@@ -49,7 +65,6 @@ class Welcome extends Component {
     this.getCurrentWeather()
       .then(res => {
         this.setState({ current: res.weather[0], loading: false });
-        console.log(this.state.current);
       })
       .catch(err => console.error('Error getting weather data'));
   }
@@ -61,7 +76,6 @@ class Welcome extends Component {
   };
 
   formatWeather = weatherType => {
-    console.log(weatherType)
     let converted = '';
     if (weatherType.toLowerCase().charAt(weatherType.length - 1) === 'y') {
       converted = weatherType.toLowerCase();
@@ -91,45 +105,35 @@ class Welcome extends Component {
               <strong>photographer</strong>,{' '}
               <strong>digital media professional</strong>, &amp;{' '}
               <strong>all-around good person </strong>
-              living in the {this.formatWeather(current.main)}{' '}
+              living in the {this.formatWeather(current.main)}
               <WeatherIcon
                 name="owm"
                 iconId={current.id.toString()}
-                className="weatherIcon"
-              />{' '}
+                style={styles.weatherIcon}
+              />
               Salt Lake City area.
-              <br />
-              <br />
-              <a
-                href="https://linkedin.com/in/clintlosee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin
-                  className="i-hov"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href="https://github.com/clintlosee"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithubSquare
-                  className="i-hov"
-                  aria-hidden="true"
-                />
-              </a>
-              <a
-                href="mailto:email@gmail.com?Subject=Hello%20there!"
-                target="_top"
-              >
-                <FaEnvelopeSquare
-                  className="i-hov"
-                  aria-hidden="true"
-                />
-              </a>
-              <br />
+              <SocialDiv>
+                <a
+                  href="https://linkedin.com/in/clintlosee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin className="i-hov" aria-hidden="true" />
+                </a>
+                <a
+                  href="https://github.com/clintlosee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithubSquare className="i-hov" aria-hidden="true" />
+                </a>
+                <a
+                  href="mailto:email@gmail.com?Subject=Hello%20there!"
+                  target="_top"
+                >
+                  <FaEnvelopeSquare className="i-hov" aria-hidden="true" />
+                </a>
+              </SocialDiv>
               <a href="/" target="_blank" rel="noopener noreferrer">
                 <WelcomeButton className="button resume-button">
                   Resume <FaFilePdf aria-hidden="true" />
