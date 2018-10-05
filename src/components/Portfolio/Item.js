@@ -13,12 +13,12 @@ class Item extends Component {
 
     return (
       <ItemStyles>
+        <img src={item.image} alt={item.title} />
         <Title>
           <a href={item.link} target={item.target}>
             {item.header}
           </a>
         </Title>
-        <img src={item.image} alt={item.title} />
         <p>{item.description}</p>
         <span>Technologies: {item.tech}</span>
         <div className="buttonList">
