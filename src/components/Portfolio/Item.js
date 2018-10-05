@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import Title from '../styles/Title';
 import ItemStyles from '../styles/ItemStyles';
-// import PriceTag from './styles/PriceTag'
 
 class Item extends Component {
   static propTypes = {
@@ -16,15 +14,18 @@ class Item extends Component {
     return (
       <ItemStyles>
         <Title>
-          <a href={item.link} target="_blank">
+          <a href={item.link} target={item.target}>
             {item.header}
           </a>
         </Title>
         <img src={item.image} alt={item.title} />
         <p>{item.description}</p>
+        <span>Technologies: {item.tech}</span>
         <div className="buttonList">
           <button>
-            <a href={item.link}>Link</a>
+            <a href={item.link} target={item.target}>
+              View
+            </a>
           </button>
         </div>
       </ItemStyles>

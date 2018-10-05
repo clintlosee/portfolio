@@ -13,12 +13,17 @@ const Item = styled.div`
     object-fit: cover;
   }
   p {
-    font-size: 12px;
     line-height: 2;
     font-weight: 300;
     flex-grow: 1;
     padding: 0 3rem;
     font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+  span {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0 3rem;
   }
   .buttonList {
     display: grid;
@@ -27,11 +32,13 @@ const Item = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1px;
     background: ${props => props.theme.lightgrey};
-    & > * {
+    & > *,
+    a {
       background: white;
       border: 0;
-      font-size: 1rem;
-      padding: 1rem;
+      font-size: 1.2rem;
+      padding: 1rem 12rem;
+      cursor: pointer;
     }
   }
 `;

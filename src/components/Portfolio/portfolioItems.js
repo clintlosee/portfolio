@@ -30,7 +30,7 @@ export default [
     description:
       'RC Willey mobile app published on iOS and Android built with React Native.',
     image: '/static/assets/images/portfolio/reactnative-rcw-folio.jpg',
-    link: '/',
+    link: '',
     target: '_blank'
   },
   {
@@ -44,7 +44,7 @@ export default [
   },
   {
     header: 'Digital Flash Cards',
-    tech: 'Angular',
+    tech: 'AngularJS',
     description: 'A digital flash card app built with Angular',
     image: '/static/assets/images/portfolio/digitalflash-folio.jpg',
     link: 'https://github.com/clintlosee/DigitalFlash',
@@ -52,7 +52,7 @@ export default [
   },
   {
     header: 'Find-A-Lens',
-    tech: 'Angular',
+    tech: 'AngularJS',
     description:
       'A photography site to allow you to find lenses based on specific criteria that is built with Angular',
     image: '/static/assets/images/portfolio/findalens-folio.jpg',
@@ -69,7 +69,7 @@ export default [
   },
   {
     header: 'RC Willey Design Consultation',
-    tech: 'CSS3, JS, jQuery',
+    tech: 'JS, CSS3, jQuery, Java',
     description: 'The design consultation program built for RC Willey.',
     image: '/static/assets/images/portfolio/rcw-design-consult-folio.png',
     link: 'http://www.rcwilley.com/Design',
@@ -77,7 +77,7 @@ export default [
   },
   {
     header: 'User CRM MEAN App',
-    tech: 'Angular, Node, Express, MongoDB',
+    tech: 'AngularJS, Node, Express, MongoDB',
     description: 'A user crm app built using the MEAN stack',
     image: '/static/assets/images/portfolio/user-crm-mean-app-folio.png',
     link: 'http://usercrm-closee.herokuapp.com/',
@@ -86,7 +86,7 @@ export default [
   },
   {
     header: 'Fly Pattern Index',
-    tech: 'PHP',
+    tech: 'PHP, HTML, CSS, JS',
     description: 'A fly pattern index app built using PHP',
     image: '/static/assets/images/portfolio/flypattern-folio.png',
     link: 'http://dgm3760.clintlosee.com/Final/',
