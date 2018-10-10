@@ -71,9 +71,6 @@ class Welcome extends Component {
   }
 
   getCurrentWeather = () => {
-    console.log(`Env Var ${process.env.WEATHER_API_KEY}`);
-    console.log(`G Env Var ${process.env.GATSBY_WEATHER_API_KEY}`);
-    console.log('apiKey', apiKey);
     return fetch(`${baseUrl}?q=salt+lake+city${apiKey}`).then(res =>
       res.json()
     );
