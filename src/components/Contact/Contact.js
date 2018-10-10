@@ -66,12 +66,11 @@ class Contact extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
-    console.log(form);
     fetch('/', {
-      method: 'POST',
+      method: 'post',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'contact-form': form.getAttribute('name'),
+        'form-name': form.getAttribute('name'),
         ...this.state
       })
     })
@@ -92,22 +91,26 @@ class Contact extends Component {
         </div>
 
         <form
-          name="contact-form"
-          method="POST"
+          name="contact"
+          method="post"
           action="/thanks/"
           className={classes.container}
           data-netlify-honeypot="bot-field"
           data-netlify="true"
           onSubmit={this.handleSubmit}
         >
-          <HiddenInput className="hidden">
+          {/* <HiddenInput className="hidden">
             <label>
               Don’t fill this out if you're human: <input name="bot-field" />
             </label>
-          </HiddenInput>
-          <HiddenInput>
-            <input type="hidden" name="contact-form" value="contact" />
-          </HiddenInput>
+          </HiddenInput> */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>
+              Don’t fill this out:{' '}
+              <input name="bot-field" onChange={this.handleChange} />
+            </label>
+          </p>
           <TextField
             id="outlined-name"
             label="Name"
