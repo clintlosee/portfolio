@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Header, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
+import { encode } from 'punycode';
+import { navigateTo } from 'gatsby-link';
 import './contact.css';
 
 const ContactDiv = styled.div`
@@ -49,17 +51,32 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: {},
-      loading: true,
       name: '',
       email: '',
       message: ''
     };
   }
+
   handleChange = name => e => {
     this.setState({
       [name]: e.target.value
     });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    console.log(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'contact-form': form.getAttribute('name'),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error));
   };
 
   render() {
@@ -75,16 +92,21 @@ class Contact extends Component {
         </div>
 
         <form
-          name="contact"
+          name="contact-form"
           method="POST"
+          action="/thanks/"
           className={classes.container}
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
           data-netlify="true"
+          onSubmit={this.handleSubmit}
         >
           <HiddenInput className="hidden">
             <label>
               Don’t fill this out if you're human: <input name="bot-field" />
             </label>
+          </HiddenInput>
+          <HiddenInput>
+            <input type="hidden" name="contact-form" value="contact" />
           </HiddenInput>
           <TextField
             id="outlined-name"

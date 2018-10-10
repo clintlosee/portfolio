@@ -5,7 +5,6 @@ import { Contact } from '../components/Contact';
 const contact = () => {
   return (
     <Layout>
-      {/* <h1>Contact Gatsby</h1> */}
       <Contact />
     </Layout>
   );
