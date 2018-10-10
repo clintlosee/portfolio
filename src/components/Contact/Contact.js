@@ -8,7 +8,11 @@ import styled from 'styled-components';
 import './contact.css';
 
 const ContactDiv = styled.div`
-  margin-top: 5rem;
+  max-width: 960px;
+  margin: 5rem auto;
+  @media (max-width: 770px) {
+    margin-top: 3rem;
+  }
 `;
 
 const HiddenInput = styled.p`
@@ -32,10 +36,11 @@ const styles = theme => ({
   },
   button: {
     margin: theme.spacing.unit,
-    marginLeft: '10px'
+    marginLeft: '10px',
+    padding: '5px 30px',
+    width: '150px'
   },
   message: {
-    // marginTop: 40,
     marginBottom: 40
   }
 });

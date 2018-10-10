@@ -134,7 +134,11 @@ class Welcome extends Component {
                   <FaEnvelopeSquare className="i-hov" aria-hidden="true" />
                 </a>
               </SocialDiv>
-              <a href="/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://drive.google.com/open?id=1Y9LpmYBXbyJdRx8fm3H5nS2p3sdA_45L"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <WelcomeButton className="button resume-button">
                   Resume <FaFilePdf aria-hidden="true" />
                 </WelcomeButton>

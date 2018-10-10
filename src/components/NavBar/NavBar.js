@@ -22,13 +22,34 @@ const SiteTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
   font-size: 1.7rem;
   transform: skew(-7deg);
+  line-height: 2;
+  @media (max-width: 770px) {
+    font-size: 1rem;
+    line-height: 3.5;
+  }
   a {
     padding: 0.5rem 1rem;
     background: ${props => props.theme.orange};
     color: white;
     text-transform: uppercase;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    @media (max-width: 770px) {
+      padding: 0.5rem;
+    }
+    :hover {
+      color: rgba(255, 255, 255, 0.4);
+      /* background-color: rgba(221, 88, 0, 1);
+      color: transparent;
+      text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text; */
+    }
   }
+  /* a:hover {
+    color: #ddd;
+  } */
 `;
 
 const NavBar = ({ siteTitle }) => (
