@@ -1,6 +1,10 @@
+require('dotenv').config({
+  path: `.env.${process.env.WEATHER_API_KEY}`
+});
+
 module.exports = {
   siteMetadata: {
-    title: 'Clint Losee Digital Portfolio',
+    title: 'Clint Losee Digital Portfolio'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -13,8 +17,8 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-      },
+        icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
+      }
     },
     'gatsby-plugin-offline',
     {
@@ -23,5 +27,5 @@ module.exports = {
         // add options here
       }
     }
-  ],
-}
+  ]
+};

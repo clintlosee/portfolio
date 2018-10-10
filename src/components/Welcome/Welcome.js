@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import WeatherIcon from 'react-icons-weather';
+import { StaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import {
   FaLinkedin,
@@ -70,7 +71,7 @@ class Welcome extends Component {
   }
 
   getCurrentWeather = () => {
-    console.log('Env Var', process.env.WEATHER_API_KEY);
+    console.log(`Env Var ${process.env.WEATHER_API_KEY}`);
     console.log('apiKey', apiKey);
     return fetch(`${baseUrl}?q=salt+lake+city${apiKey}`).then(res =>
       res.json()
