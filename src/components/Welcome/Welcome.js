@@ -7,11 +7,11 @@ import {
   FaEnvelopeSquare,
   FaFilePdf
 } from 'react-icons/fa';
-import { appId } from '../../../keys';
+// import { appId } from '../../../keys';
 import './welcome.css';
 
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const apiKey = `&appid=${appId}`;
+const apiKey = `&appid=${process.env.WEATHER_API_KEY}`;
 
 const WelcomeButton = styled.button`
   font-family: 'Montserrat', sans-serif;

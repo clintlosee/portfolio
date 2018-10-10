@@ -3,6 +3,7 @@ logs/*
 !.gitkeep
 tmp
 .idea
+.env*
 
 npm-debug
 
