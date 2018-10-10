@@ -12,7 +12,7 @@ import {
 import './welcome.css';
 
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-const apiKey = `&appid=${process.env.WEATHER_API_KEY}`;
+const apiKey = `&appid=${process.env.GATSBY_WEATHER_API_KEY}`;
 
 const WelcomeButton = styled.button`
   font-family: 'Montserrat', sans-serif;
@@ -72,6 +72,7 @@ class Welcome extends Component {
 
   getCurrentWeather = () => {
     console.log(`Env Var ${process.env.WEATHER_API_KEY}`);
+    console.log(`G Env Var ${process.env.GATSBY_WEATHER_API_KEY}`);
     console.log('apiKey', apiKey);
     return fetch(`${baseUrl}?q=salt+lake+city${apiKey}`).then(res =>
       res.json()
