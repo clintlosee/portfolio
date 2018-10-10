@@ -40,7 +40,7 @@ injectGlobal`
   }
   html {
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: 10px !important;
   }
   *, *:before, *:after {
     box-sizing: inherit;

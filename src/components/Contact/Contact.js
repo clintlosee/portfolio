@@ -79,7 +79,7 @@ class Contact extends Component {
           method="POST"
           className={classes.container}
           netlify-honeypot="bot-field"
-          netlify
+          data-netlify="true"
         >
           <HiddenInput className="hidden">
             <label>
