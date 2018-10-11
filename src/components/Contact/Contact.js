@@ -56,7 +56,6 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 
-  console.log('formdata', formdata);
   return formdata;
 };
 
@@ -78,7 +77,6 @@ class Contact extends Component {
 
   handleSubmit = e => {
     const form = e.target;
-    console.log(this.state);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -89,7 +87,6 @@ class Contact extends Component {
       })
     })
       .then(res => {
-        console.log(res);
         navigateTo(form.getAttribute('action'));
       })
       .catch(error => alert(error));
