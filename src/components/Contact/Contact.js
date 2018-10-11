@@ -51,13 +51,14 @@ const styles = theme => ({
   }
 });
 
-function encode(data) {
+const encode = data => {
   const formdata = Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 
+  console.log('formdata', formdata);
   return formdata;
-}
+};
 
 class Contact extends Component {
   constructor(props) {
@@ -76,18 +77,23 @@ class Contact extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
     const form = e.target;
+    console.log(this.state);
     fetch('/', {
-      method: 'post',
+      method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': 'contact',
+        form,
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(res => {
+        console.log(res);
+        navigateTo(form.getAttribute('action'));
+      })
       .catch(error => alert(error));
+    e.preventDefault();
   };
 
   render() {
