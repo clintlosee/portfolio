@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as FontAwesome from 'react-icons/fa';
 import { Header, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
-// import './about.css';
+import './about.css';
 
 const AboutDiv = styled.div`
   margin-top: 5rem;
@@ -12,8 +12,12 @@ const AboutDiv = styled.div`
 `;
 
 const AboutText = styled.p`
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-align: justify;
+`;
+
+const HeaderSpan = styled.span`
+  font-size: 1.5rem;
 `;
 
 class About extends Component {
@@ -31,7 +35,7 @@ class About extends Component {
         <div className="about section about-section">
           <Divider horizontal style={{ marginBottom: '40px' }}>
             <Header size="huge">About Me</Header>
-            Hi, I&#39;m Clint
+            <HeaderSpan>Hi, I&#39;m Clint</HeaderSpan>
           </Divider>
 
           <AboutText>

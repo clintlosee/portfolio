@@ -48,7 +48,7 @@ injectGlobal`
   body {
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     line-height: 2;
     font-family: 'Roboto', sans-serif;
   }

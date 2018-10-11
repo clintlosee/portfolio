@@ -6,8 +6,7 @@ import { Contact2 } from '../components/Contact2';
 const contact = () => {
   return (
     <Layout>
-      {/* <Contact /> */}
-      <Contact2 />
+      <Contact />
     </Layout>
   );
 };

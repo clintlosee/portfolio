@@ -1,3 +1,8 @@
 .contact {
   font-family: 'Montserrat', sans-serif;
 }
+
+.contact-section .ui.huge.header {
+  font-size: 4rem;
+  margin-bottom: 0;
+}

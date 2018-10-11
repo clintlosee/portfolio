@@ -1,12 +1,17 @@
 .about {
-    background-image: url(./images/ehud-neuhaus-191867-unsplash.jpg);
+    /* background-image: url(./images/ehud-neuhaus-191867-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: 1500px;
     background-position: bottom;
-    padding: 25px;
+    padding: 25px; */
   }
 
-  .about-intro {
+  .about-section .ui.huge.header {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  /* .about-intro {
     font-family: "Raleway", sans-serif;
     font-weight: 100;
     color: white;
@@ -45,4 +50,4 @@
         background-position: initial;
         background-size: 1615px;
       }
-  }
+  } */
