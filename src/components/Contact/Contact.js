@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Header, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
-import { encode } from 'punycode';
+// import { encode } from 'punycode';
 import { navigateTo } from 'gatsby-link';
 import './contact.css';
 
@@ -47,13 +47,19 @@ const styles = theme => ({
   }
 });
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
+
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      message: ''
+      // name: '',
+      // email: '',
+      // message: ''
     };
   }
 
