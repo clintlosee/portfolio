@@ -47,19 +47,21 @@ const styles = theme => ({
   }
 });
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-}
+// function encode(data) {
+//   const formdata = Object.keys(data)
+//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&');
+
+//   return formdata;
+// }
 
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // name: '',
-      // email: '',
-      // message: ''
+      name: '',
+      email: '',
+      message: ''
     };
   }
 
@@ -69,20 +71,20 @@ class Contact extends Component {
     });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
-    fetch('/', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state
-      })
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error));
-  };
+  // handleSubmit = e => {
+  //   e.preventDefault();
+  //   const form = e.target;
+  //   fetch('/', {
+  //     method: 'post',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: encode({
+  //       'form-name': form.getAttribute('name'),
+  //       ...this.state
+  //     })
+  //   })
+  //     .then(() => navigateTo(form.getAttribute('action')))
+  //     .catch(error => alert(error));
+  // };
 
   render() {
     const { classes } = this.props;
@@ -99,11 +101,11 @@ class Contact extends Component {
         <form
           name="contact"
           method="post"
-          action="/thanks/"
+          // action="/thanks/"
           className={classes.container}
           data-netlify-honeypot="bot-field"
           data-netlify="true"
-          onSubmit={this.handleSubmit}
+          // onSubmit={this.handleSubmit}
         >
           {/* <HiddenInput className="hidden">
             <label>
@@ -117,12 +119,13 @@ class Contact extends Component {
               <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
+          {/* <input type="text" name="test" placeholder="test place" /> */}
           <TextField
             id="outlined-name"
             label="Name"
             className={classes.textField}
-            value={this.state.name}
-            onChange={this.handleChange('name')}
+            // value={this.state.name}
+            // onChange={this.handleChange('name')}
             margin="normal"
             variant="outlined"
             placeholder="What's Your Name?"
@@ -131,8 +134,8 @@ class Contact extends Component {
             id="outlined-email"
             label="Email"
             className={classes.textField}
-            value={this.state.email}
-            onChange={this.handleChange('email')}
+            // value={this.state.email}
+            // onChange={this.handleChange('email')}
             margin="normal"
             variant="outlined"
             placeholder="email@gmail.com"
@@ -143,8 +146,8 @@ class Contact extends Component {
             multiline
             rows="6"
             className={classes.textFieldMessage}
-            value={this.state.message}
-            onChange={this.handleChange('message')}
+            // value={this.state.message}
+            // onChange={this.handleChange('message')}
             margin="normal"
             variant="outlined"
             placeholder="What can I help you with?"
