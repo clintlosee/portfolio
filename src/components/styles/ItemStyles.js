@@ -34,10 +34,10 @@ const Item = styled.div`
     background: ${props => props.theme.lightgrey};
     & > *,
     a {
-      background: white;
+      /* background: white; */
       border: 0;
       font-size: 1.2rem;
-      padding: 1rem 12rem;
+      padding: 1.5rem 12rem;
       cursor: pointer;
     }
   }

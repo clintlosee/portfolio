@@ -6,8 +6,8 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 import { Welcome } from './Welcome';
-import 'semantic-ui-css/semantic.min.css';
-// import './layout.css'
+// import 'semantic-ui-css/semantic.min.css';
+import './layout.css';
 
 const theme = {
   red: '#FF0000',

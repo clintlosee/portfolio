@@ -1,13 +1,13 @@
-.about {
-    /* background-image: url(./images/ehud-neuhaus-191867-unsplash.jpg);
+/* .about {
+    background-image: url(./images/ehud-neuhaus-191867-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: 1500px;
     background-position: bottom;
-    padding: 25px; */
-  }
+    padding: 25px;
+  } */
 
   .about-section .ui.huge.header {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 0;
   }
 
