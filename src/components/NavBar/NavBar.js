@@ -47,9 +47,6 @@ const SiteTitle = styled.h1`
       background-clip: text; */
     }
   }
-  /* a:hover {
-    color: #ddd;
-  } */
 `;
 
 const NavBar = ({ siteTitle }) => (
