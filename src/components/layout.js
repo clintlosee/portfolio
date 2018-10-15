@@ -6,6 +6,7 @@ import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
 import { Welcome } from './Welcome';
+import BG from '../../public/static/assets/images/bg-pattern.svg';
 // import 'semantic-ui-css/semantic.min.css';
 import './layout.css';
 
