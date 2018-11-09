@@ -76,6 +76,15 @@ class Welcome extends Component {
     );
   };
 
+  renderEmailLink = () => {
+    const emailalias = 'closee1@icloud.com';
+    return (
+      <a href={`mailto:${emailalias}?Subject=Hello%20there!`} target="_top">
+        <FaEnvelopeSquare className="i-hov" aria-hidden="true" />
+      </a>
+    );
+  };
+
   formatWeather = weatherType => {
     let converted = '';
     if (weatherType.toLowerCase().charAt(weatherType.length - 1) === 'y') {
@@ -128,12 +137,7 @@ class Welcome extends Component {
                 >
                   <FaGithubSquare className="i-hov" aria-hidden="true" />
                 </a>
-                <a
-                  href="mailto:email@gmail.com?Subject=Hello%20there!"
-                  target="_top"
-                >
-                  <FaEnvelopeSquare className="i-hov" aria-hidden="true" />
-                </a>
+                {this.renderEmailLink()}
               </SocialDiv>
               <a
                 href="https://drive.google.com/open?id=1Y9LpmYBXbyJdRx8fm3H5nS2p3sdA_45L"
