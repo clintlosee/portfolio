@@ -7,52 +7,72 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 class MobileNav extends Component {
-    state = {
-        anchorEl: null
-    }
+  state = {
+    anchorEl: null
+  };
 
-    handleClick = event => {
-        this.setState({ anchorEl: event.currentTarget });
-        console.log(event.currentTarget);
-    }
+  handleClick = event => {
+    this.setState({ anchorEl: event.currentTarget });
+    console.log(event.currentTarget);
+  };
 
-    handleClose = (event) => {
-        this.setState({ anchorEl: null });
-        console.log(event.currentTarget);
-    }
+  handleClose = event => {
+    this.setState({ anchorEl: null });
+    console.log(event.currentTarget);
+  };
 
-    handleLinkClick = (linkTo) => {
-        console.log(linkTo);
-        navigateTo(linkTo);
-    }
+  handleLinkClick = linkTo => {
+    console.log(linkTo);
+    navigateTo(linkTo);
+  };
 
-    render() {
-        const { anchorEl } = this.state;
+  render() {
+    const { anchorEl } = this.state;
 
-        return (
-            <div className="mobile-nav">
-                <Button
-                    aria-owns={anchorEl ? 'simple-menu' : null}
-                    aria-haspopup="true"
-                    onClick={this.handleClick}
-                    className="mobile-nav_btn"
-                >
-                    Menu
-                </Button>
-                <Menu
-                    id="simple-menu"
-                    anchorEl={anchorEl}
-                    open={Boolean(anchorEl)}
-                    onClose={this.handleClose}
-                >
-                    <MenuItem onClick={() => navigateTo('/')}>Home<Link to="/" className="nav-link">Home</Link></MenuItem>
-                    <MenuItem onClick={() => navigateTo('/about')}>About<Link to="/about/" className="nav-link">About</Link></MenuItem>
-                    <MenuItem onClick={() => navigateTo('/portfolio')}>Portfolio<Link to="/portfolio/" className="nav-link">Portfolio</Link></MenuItem>
-                    <MenuItem onClick={() => navigateTo('/contact')}>Contact<Link to="/contact/" className="nav-link">Contact</Link></MenuItem>
-                </Menu>
-            </div>
-        )
-    }
+    return (
+      <div className="mobile-nav">
+        <Button
+          aria-owns={anchorEl ? 'simple-menu' : null}
+          aria-haspopup="true"
+          onClick={this.handleClick}
+          className="mobile-nav_btn"
+        >
+          Menu
+        </Button>
+        <Menu
+          id="simple-menu"
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={this.handleClose}
+        >
+          <MenuItem onClick={() => navigateTo('/')}>
+            Home
+            <Link to="/" className="nav-link">
+              Home
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={() => navigateTo('/about')}>
+            About
+            <Link to="/about/" className="nav-link">
+              About
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={() => navigateTo('/portfolio')}>
+            Portfolio
+            <Link to="/portfolio/" className="nav-link">
+              Portfolio
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={() => navigateTo('/contact')}>
+            Contact
+            <Link to="/contact/" className="nav-link">
+              Contact
+            </Link>
+          </MenuItem>
+        </Menu>
+      </div>
+    );
+  }
 }
 
 // const MobileNav = ({ siteTitle }) => (

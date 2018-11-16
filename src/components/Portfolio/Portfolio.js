@@ -11,6 +11,11 @@ const PortfolioList = styled.div`
   grid-gap: 60px;
   max-width: ${props => props.theme.maxWidth};
   margin: 10vh auto 5vh;
+
+  @media (max-width: 770px) {
+    grid-template-columns: 2fr;
+    margin: 0;
+  }
 `;
 
 class Portfolio extends Component {
