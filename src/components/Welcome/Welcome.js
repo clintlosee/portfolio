@@ -121,7 +121,7 @@ class Welcome extends Component {
                 iconId={current.id.toString()}
                 style={styles.weatherIcon}
               />
-              Salt Lake City area.
+              Greater Salt Lake City area.
               <SocialDiv>
                 <a
                   href="https://linkedin.com/in/clintlosee"
