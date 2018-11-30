@@ -86,8 +86,6 @@ class Welcome extends Component {
   };
 
   formatWeather = weatherType => {
-    console.log('weatherType', weatherType);
-
     let converted = '';
     if (weatherType.toLowerCase().charAt(weatherType.length - 1) === 'y') {
       converted = weatherType.toLowerCase();
