@@ -1,0 +1,10 @@
+.mobile-nav {
+    position: fixed;
+    top: 7px;
+    right: 5px;
+    z-index: 501;
+}
+
+.mobile-nav_btn {
+    font-family: "Montserrat", sans-serif;
+}

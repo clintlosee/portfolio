@@ -3,6 +3,7 @@ logs/*
 !.gitkeep
 tmp
 .idea
+.env*
 
 npm-debug
 
@@ -95,3 +96,5 @@ node_modules
 *.css.map
 
 .cache
+
+keys.js
