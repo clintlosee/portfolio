@@ -13,7 +13,7 @@ class Item extends Component {
 
     return (
       <ItemStyles>
-        <img src={item.image} alt={item.title} />
+        <img src={item.image2} alt={item.title} />
         <Title>
           <a href={item.link} target={item.target}>
             {item.header}
