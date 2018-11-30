@@ -86,6 +86,8 @@ class Welcome extends Component {
   };
 
   formatWeather = weatherType => {
+    console.log('weatherType', weatherType);
+
     let converted = '';
     if (weatherType.toLowerCase().charAt(weatherType.length - 1) === 'y') {
       converted = weatherType.toLowerCase();
@@ -95,6 +97,12 @@ class Welcome extends Component {
       converted = 'rainy';
     } else if (weatherType.toLowerCase() === 'clouds') {
       converted = 'cloudy';
+    } else if (weatherType.toLowerCase() === 'mist') {
+      converted = 'misty';
+    } else if (weatherType.toLowerCase() === 'smoke') {
+      converted = 'smoky';
+    } else if (weatherType.toLowerCase() === 'fog') {
+      converted = 'foggy';
     } else {
       converted = weatherType;
     }
