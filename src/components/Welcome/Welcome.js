@@ -101,6 +101,8 @@ class Welcome extends Component {
       converted = 'smoky';
     } else if (weatherType.toLowerCase() === 'fog') {
       converted = 'foggy';
+    } else if (weatherType.toLowerCase() === 'snow') {
+      converted = 'snowy';
     } else {
       converted = weatherType;
     }
