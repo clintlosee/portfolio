@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WeatherIcon from 'react-icons-weather';
 import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
 import {
   FaLinkedin,
@@ -13,6 +14,12 @@ import './welcome.css';
 
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = `&appid=${process.env.GATSBY_WEATHER_API_KEY}`;
+
+const LoadingP = styled.div`
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+`;
 
 const WelcomeButton = styled.button`
   font-family: 'Montserrat', sans-serif;
@@ -115,58 +122,73 @@ class Welcome extends Component {
     const { current, loading } = this.state;
 
     return (
-      <div>
-        {loading ? (
-          'Loading...'
-        ) : (
-          <div className="welcome section">
-            <h1 className="welcome-intro">
-              I&#39;m a <strong>front-end software engineer</strong>,{' '}
-              <strong>photographer</strong>,{' '}
-              <strong>digital media professional</strong>, &amp;{' '}
-              <strong>all-around good person </strong>
-              living in the {this.formatWeather(current.main)}
-              <WeatherIcon
-                name="owm"
-                iconId={current.id.toString()}
-                style={styles.weatherIcon}
-              />
-              Greater Salt Lake City area.
-              <SocialDiv>
-                <a
-                  href="https://linkedin.com/in/clintlosee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin className="i-hov" aria-hidden="true" />
-                </a>
-                <a
-                  href="https://github.com/clintlosee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithubSquare className="i-hov" aria-hidden="true" />
-                </a>
-                {this.renderEmailLink()}
-              </SocialDiv>
-              <a
-                href="https://drive.google.com/open?id=1Y9LpmYBXbyJdRx8fm3H5nS2p3sdA_45L"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <WelcomeButton className="button resume-button">
-                  Resume <FaFilePdf aria-hidden="true" />
-                </WelcomeButton>
-              </a>
-            </h1>
-            <img
-              src="https://avatars0.githubusercontent.com/u/5192207?v=4"
-              className="main-pic"
-              alt="Clint Losee"
-            />
-          </div>
+      <StaticQuery
+        query={graphql`
+          query ImageQuery {
+            file(relativePath: { regex: "/clint/" }) {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        `}
+        render={data => (
+          <>
+            {loading ? (
+              <LoadingP>Loading...</LoadingP>
+            ) : (
+              <div className="welcome section">
+                <h1 className="welcome-intro">
+                  I&#39;m a <strong>front-end software engineer</strong>,{' '}
+                  <strong>photographer</strong>,{' '}
+                  <strong>digital media professional</strong>, &amp;{' '}
+                  <strong>all-around good person </strong>
+                  living in the {this.formatWeather(current.main)}
+                  <WeatherIcon
+                    name="owm"
+                    iconId={current.id.toString()}
+                    style={styles.weatherIcon}
+                  />
+                  Greater Salt Lake City area.
+                  <SocialDiv>
+                    <a
+                      href="https://linkedin.com/in/clintlosee"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin className="i-hov" aria-hidden="true" />
+                    </a>
+                    <a
+                      href="https://github.com/clintlosee"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaGithubSquare className="i-hov" aria-hidden="true" />
+                    </a>
+                    {this.renderEmailLink()}
+                  </SocialDiv>
+                  <a
+                    href="https://drive.google.com/open?id=1Y9LpmYBXbyJdRx8fm3H5nS2p3sdA_45L"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <WelcomeButton className="button resume-button">
+                      Resume <FaFilePdf aria-hidden="true" />
+                    </WelcomeButton>
+                  </a>
+                </h1>
+
+                <Img
+                  fluid={data.file.childImageSharp.fluid}
+                  className="main-pic"
+                />
+              </div>
+            )}
+          </>
         )}
-      </div>
+      />
     );
   }
 }

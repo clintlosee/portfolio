@@ -47,8 +47,10 @@
 
 .main-pic {
     border-radius: 50%;
-    width: 40vw;
-    padding: 20px;
+    /* width: 40vw; */
+    width: 100vw;
+    /* padding: 20px; */
+    padding: 75px;
 }
 
 .weatherIcon {
