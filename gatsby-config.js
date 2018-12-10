@@ -23,7 +23,7 @@ module.exports = {
         background_color: '#ff6600',
         theme_color: '#ff6600',
         display: 'minimal-ui',
-        icon: 'src/images/clintlosee-icon.png' // This path is relative to the root of the site.
+        icon: 'src/images/cl-icon.png' // This path is relative to the root of the site.
       }
     },
     'gatsby-plugin-offline',
