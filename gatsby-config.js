@@ -4,10 +4,14 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Clint Losee Digital Portfolio'
+    title: 'Clint Losee Digital Portfolio',
+    description:
+      'The digital portfolio site for Clint Losee, a front end software engineer/developer and landscape photographer from Utah!',
+    siteUrl: 'https://clintlosee.me'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
