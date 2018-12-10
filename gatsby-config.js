@@ -35,6 +35,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`
       }
-    }
+    },
+    `gatsby-plugin-netlify` // make sure to put last in the array
   ]
 };
