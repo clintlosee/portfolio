@@ -5,8 +5,8 @@ import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './header';
-import { Welcome } from './Welcome';
-import BG from '../../public/static/assets/images/bg-pattern.svg';
+// import { Welcome } from './Welcome';
+// import BG from '../../public/static/assets/images/bg-pattern.svg';
 // import 'semantic-ui-css/semantic.min.css';
 import './layout.css';
 
@@ -18,7 +18,7 @@ const theme = {
   lightgrey: '#E1E1E1',
   offWhite: '#EDEDED',
   maxWidth: '1200px',
-  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
+  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
 };
 
 const StyledPage = styled.div`
@@ -77,7 +77,7 @@ const Layout = ({ children }) => (
             title={data.site.siteMetadata.title}
             meta={[
               { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' }
+              { name: 'keywords', content: 'sample, something' },
             ]}
           >
             <html lang="en" />
@@ -93,7 +93,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

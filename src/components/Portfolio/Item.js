@@ -5,7 +5,7 @@ import ItemStyles from '../styles/ItemStyles';
 
 class Item extends Component {
   static propTypes = {
-    item: PropTypes.object.isRequired
+    item: PropTypes.object.isRequired,
   };
 
   render() {
@@ -22,7 +22,7 @@ class Item extends Component {
         <p>{item.description}</p>
         <span>Technologies: {item.tech}</span>
         <div className="buttonList">
-          <button>
+          <button type="button">
             <a href={item.link} target={item.target}>
               View
             </a>

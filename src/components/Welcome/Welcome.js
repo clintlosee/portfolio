@@ -7,7 +7,7 @@ import {
   FaLinkedin,
   FaGithubSquare,
   FaEnvelopeSquare,
-  FaFilePdf
+  FaFilePdf,
 } from 'react-icons/fa';
 // import { appId } from '../../../keys';
 import './welcome.css';
@@ -56,8 +56,8 @@ const SocialDiv = styled.div`
 
 const styles = {
   weatherIcon: {
-    margin: '0 5px'
-  }
+    margin: '0 5px',
+  },
 };
 
 class Welcome extends Component {
@@ -65,7 +65,7 @@ class Welcome extends Component {
     super(props);
     this.state = {
       current: {},
-      loading: true
+      loading: true,
     };
   }
 
@@ -77,11 +77,8 @@ class Welcome extends Component {
       .catch(err => console.error('Error getting weather data'));
   }
 
-  getCurrentWeather = () => {
-    return fetch(`${baseUrl}?q=salt+lake+city${apiKey}`).then(res =>
-      res.json()
-    );
-  };
+  getCurrentWeather = () =>
+    fetch(`${baseUrl}?q=salt+lake+city${apiKey}`).then(res => res.json());
 
   renderEmailLink = () => {
     const emailalias = 'closee1@icloud.com';

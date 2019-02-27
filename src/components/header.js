@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import { NavBar } from './NavBar';
 
@@ -17,5 +17,9 @@ const Header = ({ siteTitle }) => (
     <NavBar siteTitle={siteTitle} />
   </HeaderDiv>
 );
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+};
 
 export default Header;

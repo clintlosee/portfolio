@@ -1,12 +1,12 @@
 import React from 'react';
-import Layout from '../components/layout';
 import styled from 'styled-components';
+import Layout from '../components/layout';
 
 const ThanksDiv = styled.div`
   margin-top: 3rem;
 `;
 
-export default () => (
+const thanks = () => (
   <Layout>
     <ThanksDiv>
       <h1>Thank you!</h1>
@@ -17,3 +17,5 @@ export default () => (
     </ThanksDiv>
   </Layout>
 );
+
+export default thanks;

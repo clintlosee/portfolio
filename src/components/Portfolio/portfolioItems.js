@@ -20,7 +20,7 @@ export default [
     image: '/static/assets/images/portfolio/react-calculator-folio.jpg',
     image2: calculatorImg,
     link: 'http://projects.clintlosee.com/React-Calculator/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'React Weather App',
@@ -29,7 +29,7 @@ export default [
     image: '/static/assets/images/portfolio/react-weather-folio.png',
     image2: weatherImg,
     link: 'http://projects.clintlosee.com/React-Weather/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'React Express Email App',
@@ -39,7 +39,7 @@ export default [
     image: '/static/assets/images/portfolio/emailyapp-folio.png',
     image2: emailImg,
     link: 'https://pure-hamlet-14064.herokuapp.com/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'RC Willey Mobile App',
@@ -49,7 +49,7 @@ export default [
     image: '/static/assets/images/portfolio/reactnative-rcw-folio.jpg',
     image2: rcwMobileImg,
     link: '',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'Store Review App',
@@ -59,7 +59,7 @@ export default [
     image: '/static/assets/images/portfolio/deliciousapp-folio.png',
     image2: storeReviewImg,
     link: 'https://delicious-store-app-uddygzwzhz.now.sh/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'Digital Flash Cards',
@@ -68,7 +68,7 @@ export default [
     image: '/static/assets/images/portfolio/digitalflash-folio.jpg',
     image2: digitalFlashImg,
     link: 'https://github.com/clintlosee/DigitalFlash',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'Find-A-Lens',
@@ -78,7 +78,7 @@ export default [
     image: '/static/assets/images/portfolio/findalens-folio.jpg',
     image2: findALensImg,
     link: 'https://github.com/clintlosee/FindALens',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'React YouTube',
@@ -87,7 +87,7 @@ export default [
     image: '/static/assets/images/portfolio/react-youtube-folio.jpg',
     image2: reactYTImg,
     link: 'https://clintlosee-react-youtube.netlify.com/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'RC Willey Design Consultation',
@@ -96,7 +96,7 @@ export default [
     image: '/static/assets/images/portfolio/rcw-design-consult-folio.png',
     image2: rcwDesignImg,
     link: 'http://www.rcwilley.com/Design',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'User CRM MEAN App',
@@ -106,7 +106,7 @@ export default [
     image2: userCRMImg,
     link: 'http://usercrm-closee.herokuapp.com/',
     // link: 'userCrm',
-    target: ''
+    target: '',
   },
   {
     header: 'Fly Pattern Index',
@@ -115,7 +115,7 @@ export default [
     image: '/static/assets/images/portfolio/flypattern-folio.png',
     image2: flyPatternImg,
     link: 'http://dgm3760.clintlosee.com/Final/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'Title West Title Company',
@@ -125,7 +125,7 @@ export default [
     image: '/static/assets/images/portfolio/titlewest-folio.png',
     image2: twImg,
     link: 'http://www.titlewest.com/',
-    target: '_blank'
+    target: '_blank',
   },
   {
     header: 'Clint Losee Photography',
@@ -135,6 +135,6 @@ export default [
     image: '/static/assets/images/portfolio/clintloseephoto-folio.png',
     image2: clpImg,
     link: 'https://hardcore-noyce-9b6d0e.netlify.com/',
-    target: '_blank'
-  }
+    target: '_blank',
+  },
 ];

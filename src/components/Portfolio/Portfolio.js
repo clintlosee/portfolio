@@ -1,5 +1,7 @@
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["renderPortfolio"] }] */
+
 import React, { Component } from 'react';
-import * as FontAwesome from 'react-icons/fa';
+// import * as FontAwesome from 'react-icons/fa';
 import styled from 'styled-components';
 import './portfolio.css';
 import Item from './Item';
@@ -19,18 +21,8 @@ const PortfolioList = styled.div`
 `;
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: {},
-      loading: true
-    };
-  }
-
   renderPortfolio() {
-    return items.map(item => {
-      return <Item item={item} key={item.header} />;
-    });
+    return items.map(item => <Item item={item} key={item.header} />);
   }
 
   render() {

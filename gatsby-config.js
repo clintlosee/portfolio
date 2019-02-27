@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env.${process.env.WEATHER_API_KEY}`
+  path: `.env.${process.env.WEATHER_API_KEY}`,
 });
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
     title: 'Clint Losee Digital Portfolio',
     description:
       'The digital portfolio site for Clint Losee, a front end software engineer/developer and landscape photographer from Utah!',
-    siteUrl: 'https://clintlosee.me'
+    siteUrl: 'https://clintlosee.me',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -23,23 +23,23 @@ module.exports = {
         background_color: '#ff6600',
         theme_color: '#ff6600',
         display: 'minimal-ui',
-        icon: 'src/images/cl-icon.png' // This path is relative to the root of the site.
-      }
+        icon: 'src/images/cl-icon.png', // This path is relative to the root of the site.
+      },
     },
     'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {
         // add options here
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
-    `gatsby-plugin-netlify` // make sure to put last in the array
-  ]
+    `gatsby-plugin-netlify`, // make sure to put last in the array
+  ],
 };

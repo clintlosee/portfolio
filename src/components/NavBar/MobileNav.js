@@ -8,7 +8,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 class MobileNav extends Component {
   state = {
-    anchorEl: null
+    anchorEl: null,
   };
 
   handleClick = event => {

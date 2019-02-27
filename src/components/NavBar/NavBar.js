@@ -2,21 +2,22 @@ import React from 'react';
 import Link from 'gatsby-link';
 import MediaQuery from 'react-responsive';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { MobileNav } from './index';
 import './navBar.css';
 
-const NavBarStyle = styled.div`
-  list-style-type: none;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-  background-color: #f1f1f1;
-  z-index: 500;
-`;
+// const NavBarStyle = styled.div`
+//   list-style-type: none;
+//   width: 100%;
+//   position: fixed;
+//   top: 0;
+//   margin: 0;
+//   padding: 0;
+//   overflow: hidden;
+//   text-align: center;
+//   background-color: #f1f1f1;
+//   z-index: 500;
+// `;
 
 const SiteTitle = styled.h1`
   font-family: 'Montserrat', sans-serif;
@@ -83,5 +84,9 @@ const NavBar = ({ siteTitle }) => (
     </MediaQuery>
   </div>
 );
+
+NavBar.propTypes = {
+  siteTitle: PropTypes.string,
+};
 
 export default NavBar;

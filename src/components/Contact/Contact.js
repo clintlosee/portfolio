@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Header, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import { navigateTo } from 'gatsby-link';
 import './contact.css';
 
@@ -21,39 +22,39 @@ const HeaderSpan = styled.span`
   font-size: 1.5rem;
 `;
 
-const HiddenInput = styled.p`
-  display: none;
-`;
+// const HiddenInput = styled.p`
+//   display: none;
+// `;
 
 const styles = theme => ({
   container: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 'calc(50% - 16px)'
+    width: 'calc(50% - 16px)',
   },
   textFieldMessage: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: '100%'
+    width: '100%',
   },
   button: {
     margin: theme.spacing.unit,
     marginLeft: '10px',
     padding: '5px 30px',
-    width: '150px'
+    width: '150px',
   },
   message: {
-    marginBottom: 40
-  }
+    marginBottom: 40,
+  },
 });
 
 const encode = data => {
   const formdata = Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
   return formdata;
@@ -65,13 +66,13 @@ class Contact extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
     };
   }
 
   handleChange = name => e => {
     this.setState({
-      [name]: e.target.value
+      [name]: e.target.value,
     });
   };
 
@@ -83,8 +84,8 @@ class Contact extends Component {
       body: encode({
         'form-name': 'contact',
         form,
-        ...this.state
-      })
+        ...this.state,
+      }),
     })
       .then(res => {
         navigateTo(form.getAttribute('action'));
@@ -95,6 +96,7 @@ class Contact extends Component {
 
   render() {
     const { classes } = this.props;
+    const { name, email, message } = this.state;
 
     return (
       <ContactDiv>
@@ -121,7 +123,7 @@ class Contact extends Component {
           </HiddenInput> */}
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
-            <label>
+            <label htmlFor="bot-field">
               Don’t fill this out:{' '}
               <input name="bot-field" onChange={this.handleChange} />
             </label>
@@ -131,7 +133,7 @@ class Contact extends Component {
             label="Name"
             name="name"
             className={classes.textField}
-            value={this.state.name}
+            value={name}
             onChange={this.handleChange('name')}
             margin="normal"
             variant="outlined"
@@ -142,7 +144,7 @@ class Contact extends Component {
             label="Email"
             name="email"
             className={classes.textField}
-            value={this.state.email}
+            value={email}
             onChange={this.handleChange('email')}
             margin="normal"
             variant="outlined"
@@ -155,7 +157,7 @@ class Contact extends Component {
             multiline
             rows="6"
             className={classes.textFieldMessage}
-            value={this.state.message}
+            value={message}
             onChange={this.handleChange('message')}
             margin="normal"
             variant="outlined"
@@ -169,5 +171,9 @@ class Contact extends Component {
     );
   }
 }
+
+Contact.propTypes = {
+  classes: PropTypes.object,
+};
 
 export default withStyles(styles)(Contact);

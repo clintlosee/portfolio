@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import {
   FaCss3,
-  FaNodeJs,
   FaNode,
   FaWordpress,
   FaReact,
   FaVuejs,
   FaSass,
   FaGithubAlt,
-  FaSearch
+  FaSearch,
 } from 'react-icons/fa';
-import { Header, Divider, Icon } from 'semantic-ui-react';
+import { Header, Divider } from 'semantic-ui-react';
 import styled from 'styled-components';
 import './about.css';
 
@@ -42,15 +41,31 @@ const ListItem = styled.div`
   }
 `;
 
-class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      current: {},
-      loading: true
-    };
-  }
+const ListItemRN = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem !important;
+  margin: 15px;
+  text-align: center;
 
+  svg {
+    font-size: 5rem !important;
+    height: 6rem;
+  }
+`;
+
+const ListItemNode = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem !important;
+  margin: 15px;
+  text-align: center;
+
+  svg {
+    font-size: 8rem !important;
+    height: 6rem;
+  }
+`;
+
+class About extends Component {
   render() {
     return (
       <AboutDiv>
@@ -94,18 +109,21 @@ class About extends Component {
                 <div className="header">VueJS</div>
               </div>
             </ListItem>
-            <ListItem role="listitem" className="item">
+            <ListItemRN role="listitem" className="item">
               <FaReact className="i-hov" aria-hidden="true" />
               <div className="content">
-                <div className="header">React/React Native</div>
+                <div className="header rn">
+                  React &amp;
+                  <br /> React Native
+                </div>
               </div>
-            </ListItem>
-            <ListItem role="listitem" className="item">
+            </ListItemRN>
+            <ListItemNode role="listitem" className="item">
               <FaNode className="i-hov" aria-hidden="true" />
               <div className="content">
                 <div className="header">NodeJS</div>
               </div>
-            </ListItem>
+            </ListItemNode>
             <ListItem role="listitem" className="item">
               <FaCss3 className="i-hov" aria-hidden="true" />
               <div className="content">
