@@ -109,23 +109,14 @@ export default [
     target: '',
   },
   {
-    header: 'Fly Pattern Index',
-    tech: 'PHP, HTML, CSS, JS',
-    description: 'A fly pattern index app built using PHP',
-    image: '/static/assets/images/portfolio/flypattern-folio.png',
-    image2: flyPatternImg,
-    link: 'http://dgm3760.clintlosee.com/Final/',
-    target: '_blank',
-  },
-  {
     header: 'Title West Title Company',
     tech: 'JS, jQuery, HTML, CSS3, PHP',
     description:
       'TW company website rebuilt to update and retain control of content.',
     image: '/static/assets/images/portfolio/titlewest-folio.png',
     image2: twImg,
-    link: 'http://www.titlewest.com/',
-    target: '_blank',
+    link: '#',
+    target: '',
   },
   {
     header: 'Clint Losee Photography',
