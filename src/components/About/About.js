@@ -80,14 +80,15 @@ class About extends Component {
             Degree in Digital Media with an emphasis in Internet Technologies
             from Utah Valley University. I focus primarily on Front-End
             JavaScript development, but I also love figuring out what I can do
-            with server-side NodeJS. I have been studying in this field for too
-            many years to count now and working professionally for over 4 years.
-            Along with my formal schooling I have taken on various freelance
-            projects and additional self-prescribed educational projects to help
-            boost my skills in this ever-changing field. With various skills in
-            Internet Technologies along with a strong desire to learn and grow,
-            I&#39;m in search of exciting opportunities to help further my
-            knowledge and expertise in the web development world.
+            with server-side NodeJS among other things. I have been studying in
+            this field for too many years to count and working professionally
+            for over 4 years. Along with my formal schooling I have taken on
+            various freelance projects and additional self-prescribed
+            educational projects to help boost my skills in this ever-changing
+            field. With various skills in Internet Technologies along with a
+            strong desire to learn and grow, I&#39;m in search of exciting
+            opportunities to help further my knowledge and expertise in the web
+            development world.
           </AboutText>
           <AboutText>
             There is nothing I&#39;m not willing to devote myself to learning.
@@ -99,7 +100,8 @@ class About extends Component {
           </AboutText>
 
           <AboutText>
-            Skills and technologies I have worked with include:
+            Skills and technologies I have worked with include, but not limited
+            to:
           </AboutText>
 
           <div role="list" className="ui horizontal list">

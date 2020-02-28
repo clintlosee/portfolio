@@ -7,8 +7,8 @@ import digitalFlashImg from '../../images/portfolio/digitalflash-folio.jpg';
 import findALensImg from '../../images/portfolio/findalens-folio.jpg';
 import reactYTImg from '../../images/portfolio/react-youtube-folio.jpg';
 import rcwDesignImg from '../../images/portfolio/rcw-design-consult-folio.png';
-import userCRMImg from '../../images/portfolio/user-crm-mean-app-folio.png';
-import flyPatternImg from '../../images/portfolio/flypattern-folio.png';
+// import userCRMImg from '../../images/portfolio/user-crm-mean-app-folio.png';
+// import flyPatternImg from '../../images/portfolio/flypattern-folio.png';
 import twImg from '../../images/portfolio/titlewest-folio.png';
 import clpImg from '../../images/portfolio/clintloseephoto-folio.png';
 
@@ -97,16 +97,6 @@ export default [
     image2: rcwDesignImg,
     link: 'http://www.rcwilley.com/Design',
     target: '_blank',
-  },
-  {
-    header: 'User CRM MEAN App',
-    tech: 'AngularJS, Node, Express, MongoDB',
-    description: 'A user crm app built using the MEAN stack',
-    image: '/static/assets/images/portfolio/user-crm-mean-app-folio.png',
-    image2: userCRMImg,
-    link: 'http://usercrm-closee.herokuapp.com/',
-    // link: 'userCrm',
-    target: '',
   },
   {
     header: 'Title West Title Company',
