@@ -1,0 +1,88 @@
+{
+    "accent_color": "yellow",
+    "color_scheme": "dark",
+    "description": "Test portfolio theme with a blog",
+    "footer": {
+        "content": "&copy; Clint Losee. All rights reserved. This Jamstack site was created on <a href=\"https://www.stackbit.com\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Get yours <a href=\"https://app.stackbit.com/create?theme=exto\" target=\"_blank\" rel=\"noopener\">here</a>.",
+        "has_social": true,
+        "social_links": [
+            {
+                "icon_class": "fa-twitter",
+                "label": "Twitter",
+                "new_window": true,
+                "style": "icon",
+                "type": "action",
+                "url": "https://twitter.com/ClintLosee"
+            },
+            {
+                "icon_class": "fa-instagram",
+                "label": "Instagram",
+                "new_window": true,
+                "style": "icon",
+                "type": "action",
+                "url": "https://www.instagram.com/ClintLosee"
+            },
+            {
+                "icon_class": "fa-facebook",
+                "label": "Facebook",
+                "new_window": true,
+                "style": "icon",
+                "type": "action",
+                "url": "https://facebook.com/clint.losee"
+            },
+            {
+                "icon_class": "fa-linkedin",
+                "label": "LinkedIn",
+                "new_window": true,
+                "style": "icon",
+                "type": "action",
+                "url": "https://www.linkedin.com/in/clintlosee/"
+            }
+        ],
+        "type": "footer"
+    },
+    "header": {
+        "has_nav": true,
+        "nav_links": [
+            {
+                "label": "Home",
+                "style": "link",
+                "type": "action",
+                "url": "/"
+            },
+            {
+                "label": "Portfolio",
+                "style": "link",
+                "type": "action",
+                "url": "/portfolio/"
+            },
+            {
+                "label": "Blog",
+                "style": "link",
+                "type": "action",
+                "url": "/blog/"
+            },
+            {
+                "label": "Style Guide",
+                "style": "link",
+                "type": "action",
+                "url": "/style-guide/"
+            },
+            {
+                "label": "About",
+                "style": "link",
+                "type": "action",
+                "url": "/about/"
+            },
+            {
+                "label": "Contact",
+                "style": "link",
+                "type": "action",
+                "url": "/contact/"
+            }
+        ],
+        "title": "Exto",
+        "type": "header"
+    },
+    "title": "Clint Losee Exto Theme"
+}

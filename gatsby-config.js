@@ -1,45 +1,33 @@
-require('dotenv').config({
-  path: `.env.${process.env.WEATHER_API_KEY}`,
-});
+const siteMetadata = require('./site-metadata.json')
 
 module.exports = {
-  siteMetadata: {
-    title: 'Clint Losee Digital Portfolio',
-    description:
-      'The digital portfolio site for Clint Losee, a front end software engineer/developer and landscape photographer from Utah!',
-    siteUrl: 'https://clintlosee.me',
-  },
-  plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'clint-losee-digital-portfolio',
-        short_name: 'CL-Portfolio',
-        start_url: '/',
-        background_color: '#ff6600',
-        theme_color: '#ff6600',
-        display: 'minimal-ui',
-        icon: 'src/images/cl-icon.png', // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-styled-components',
-      options: {
-        // add options here
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-plugin-netlify`, // make sure to put last in the array
-  ],
+    pathPrefix: '/',
+    siteMetadata: siteMetadata,
+    plugins: [
+        `gatsby-plugin-react-helmet`,
+        `gatsby-source-data`,
+        `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `pages`,
+                path: `${__dirname}/src/pages`
+            }
+        },
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {}
+        },
+        {
+            resolve: `gatsby-remark-page-creator`,
+            options: {}
+        },
+        {
+            resolve: `@stackbit/gatsby-plugin-menus`,
+            options: {
+                sourceUrlPath: `fields.url`,
+                pageContextProperty: `menus`,
+            }
+        }
+    ]
 };

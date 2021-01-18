@@ -4,4 +4,21 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+const React = require("react");
+const withPrefix = require("./src/utils/withPrefix").default;
+
+exports.onRenderBody = function({ setHeadComponents, setPostBodyComponents }) {
+
+    setHeadComponents([
+        
+    ]);
+
+    setPostBodyComponents([
+        <React.Fragment>
+            <script src={withPrefix('assets/js/plugins.js')}/>
+            <script src={withPrefix('assets/js/main.js')}/>
+            
+        </React.Fragment>
+    ]);
+
+};

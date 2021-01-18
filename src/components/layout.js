@@ -1,99 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import styled, { ThemeProvider, injectGlobal } from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
+import {Helmet} from 'react-helmet';
+import _ from 'lodash';
 
-import Header from './header';
-// import { Welcome } from './Welcome';
-// import BG from '../../public/static/assets/images/bg-pattern.svg';
-// import 'semantic-ui-css/semantic.min.css';
-import './layout.css';
+import '../sass/main.scss';
+import Header from './Header';
+import Footer from './Footer';
 
-const theme = {
-  red: '#FF0000',
-  orange: '#FF6600',
-  black: '#393939',
-  grey: '#3A3A3A',
-  lightgrey: '#E1E1E1',
-  offWhite: '#EDEDED',
-  maxWidth: '1200px',
-  bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)',
-};
-
-const StyledPage = styled.div`
-  background: white;
-  color: ${props => props.theme.black};
-`;
-
-const Inner = styled.div`
-  max-width: ${props => props.theme.maxWidth};
-  margin: 0 auto;
-  padding: 2rem;
-`;
-
-injectGlobal`
-  @font-face {
-    font-family: 'Roboto';
-    src: url('/public/static/Roboto-Regular.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-  }
-  html {
-    box-sizing: border-box;
-    font-size: 10px !important;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem !important;
-    line-height: 2;
-    font-family: 'Roboto', sans-serif;
-  }
-  a {
-    text-decoration: none;
-    color: ${theme.black};
-  }
-`;
-
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <ThemeProvider theme={theme}>
-        <>
-          <Helmet
-            title={data.site.siteMetadata.title}
-            meta={[
-              { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
-            ]}
-          >
-            <html lang="en" />
-          </Helmet>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <StyledPage>
-            <Inner>{children}</Inner>
-          </StyledPage>
-        </>
-      </ThemeProvider>
-    )}
-  />
-);
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
+export default class Body extends React.Component {
+    render() {
+        return (
+            <React.Fragment>
+                <Helmet>
+                    <title>{_.get(this.props, 'pageContext.frontmatter.title', null) && (_.get(this.props, 'pageContext.frontmatter.title', null) + ' - ')}{_.get(this.props, 'pageContext.site.siteMetadata.title', null)}</title>
+                    <meta charSet="utf-8"/>
+                    <meta name="viewport" content="width=device-width, initialScale=1.0" />
+                    <meta name="google" content="notranslate" />
+                    <meta name="description" content={_.get(this.props, 'pageContext.frontmatter.excerpt', null) || _.get(this.props, 'pageContext.site.siteMetadata.description', null)}/>
+                    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet"/> 
+                </Helmet>
+                <div id="page" className={'site palette-' + _.get(this.props, 'pageContext.site.siteMetadata.color_scheme', null) + ' accent-' + _.get(this.props, 'pageContext.site.siteMetadata.accent_color', null)}>
+                  <Header {...this.props} />
+                  <main id="content" className="site-content">
+                    {this.props.children}
+                  </main>
+                  <Footer {...this.props} />
+                </div>
+            </React.Fragment>
+        );
+    }
+}
