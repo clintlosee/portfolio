@@ -1,45 +1,55 @@
-require('dotenv').config({
-  path: `.env.${process.env.WEATHER_API_KEY}`,
-});
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
 
 module.exports = {
   siteMetadata: {
-    title: 'Clint Losee Digital Portfolio',
-    description:
-      'The digital portfolio site for Clint Losee, a front end software engineer/developer and landscape photographer from Utah!',
-    siteUrl: 'https://clintlosee.me',
+    title: 'WebDev Portfolio',
+    description: 'This is WebDev Portfolio Site',
+    author: '@clintlosee',
+    twitterUsername: '@ClintLosee',
+    image: '/twitter-img.png',
+    siteUrl: 'https://gatsby-strapi-test-portfolio.netlify.app',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sitemap',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'clint-losee-digital-portfolio',
-        short_name: 'CL-Portfolio',
-        start_url: '/',
-        background_color: '#ff6600',
-        theme_color: '#ff6600',
-        display: 'minimal-ui',
-        icon: 'src/images/cl-icon.png', // This path is relative to the root of the site.
-      },
-    },
-    'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-styled-components',
-      options: {
-        // add options here
-      },
-    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
-    `gatsby-plugin-netlify`, // make sure to put last in the array
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Default to 100
+        //   contentTypes : `jobs`, `projects`, `blogs`,
+        //   singleType : `about`
+        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+        contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Roboto',
+              variants: ['400', '700'],
+            },
+            { family: 'Open Sans' },
+          ],
+        },
+      },
+    },
   ],
-};
+}
