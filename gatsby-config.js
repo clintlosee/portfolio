@@ -1,3 +1,7 @@
+const dotenv = require('dotenv')
+
+dotenv.config({ path: '.env' })
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -28,8 +32,11 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
+        apiURL:
+          process.env.NODE_ENV === 'development'
+            ? `http://localhost:1337`
+            : 'https://cl-portfolio-api.herokuapp.com',
+        queryLimit: 5000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!

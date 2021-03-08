@@ -1,9 +1,19 @@
 {
   "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#FFF",
-    "titleBar.inactiveForeground": "#FFFFFFCC",
-    "titleBar.activeBackground": "#FF6600",
-    "titleBar.inactiveBackground": "#FF6600CC"
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "titleBar.activeBackground": "#ff6600",
+    "titleBar.inactiveBackground": "#ff660099",
+    "activityBar.activeBackground": "#ff8533",
+    "activityBar.activeBorder": "#9fffc6",
+    "activityBar.background": "#ff8533",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#9fffc6",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#ff6600",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#cc5200"
   },
   // These are the auto-save configs
   "editor.formatOnSave": true,
@@ -23,5 +33,9 @@
   "cSpell.words": [
     "Losee",
     "clintlosee"
+  ],
+  "peacock.color": "#FF6600",
+  "cSpell.ignoreWords": [
+    "cleandev"
   ]
 }

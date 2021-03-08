@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import ReactMarkdown from 'react-markdown'
 import Image from 'gatsby-image'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
@@ -23,7 +24,8 @@ const About = ({
           )}
           <article className="about-text">
             <Title title={title} />
-            <p>{info}</p>
+            <ReactMarkdown source={info} />
+
             <div className="about-stack">
               {stack.map(item => (
                 <span key={item.id}>{item.title}</span>
