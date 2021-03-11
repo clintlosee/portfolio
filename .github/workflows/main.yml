@@ -40,7 +40,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.1.11
         with:
           publish-dir: "./public"
-          production-branch: main
+          production-branch: updated-portfolio
 
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
