@@ -10,8 +10,8 @@ dotenv.config({ path: '.env' })
 
 module.exports = {
   siteMetadata: {
-    title: 'WebDev Portfolio',
-    description: 'This is WebDev Portfolio Site',
+    title: 'Clint Losee Portfolio',
+    description: 'This is the Portfolio Site of Clint Losee',
     author: '@clintlosee',
     twitterUsername: '@ClintLosee',
     image: '/twitter-img.png',
