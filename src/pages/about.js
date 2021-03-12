@@ -27,6 +27,7 @@ const About = ({
             <ReactMarkdown source={info} />
 
             <div className="about-stack">
+              <h3>Skills</h3>
               {stack.map(item => (
                 <span key={item.id}>{item.title}</span>
               ))}

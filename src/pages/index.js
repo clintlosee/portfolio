@@ -18,7 +18,9 @@ export default function IndexPage({ data }) {
     <Layout>
       <SEO title="Home" description="This is our home page." />
       <Hero />
-      <Services />
+      {
+        // <Services />
+      }
       <Jobs />
       <Projects projects={projects} title="Featured Projects" showLink />
       <Blogs posts={blogs} title="Latest Posts" showLink />
