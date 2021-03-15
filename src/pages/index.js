@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import Services from '../components/Services'
+// import Services from '../components/Services'
 import Jobs from '../components/Jobs'
 import Projects from '../components/Projects'
 import Blogs from '../components/Blogs'
@@ -16,7 +16,7 @@ export default function IndexPage({ data }) {
   } = data
   return (
     <Layout>
-      <SEO title="Home" description="This is our home page." />
+      <SEO title="Home" description="Clint.tech Home Page" />
       <Hero />
       {
         // <Services />

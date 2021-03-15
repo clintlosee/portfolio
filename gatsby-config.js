@@ -10,12 +10,12 @@ dotenv.config({ path: '.env' })
 
 module.exports = {
   siteMetadata: {
-    title: 'Clint Losee Portfolio',
+    title: 'Clint Losee Dev Portfolio',
     description: 'This is the Portfolio Site of Clint Losee',
     author: '@clintlosee',
     twitterUsername: '@ClintLosee',
     image: '/twitter-img.png',
-    siteUrl: 'https://gatsby-strapi-test-portfolio.netlify.app',
+    siteUrl: 'https://clint.tech',
   },
   plugins: [
     `gatsby-transformer-sharp`,

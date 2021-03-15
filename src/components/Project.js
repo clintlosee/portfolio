@@ -42,6 +42,7 @@ Project.propTypes = {
   url: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
   stack: PropTypes.arrayOf(PropTypes.object).isRequired,
+  index: PropTypes.number,
 }
 
 export default Project

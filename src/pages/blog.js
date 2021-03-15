@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Blogs from '../components/Blogs'
+import SEO from '../components/SEO'
 
 const BlogPage = ({
   data: {
@@ -10,6 +11,7 @@ const BlogPage = ({
   },
 }) => (
   <Layout>
+    <SEO title="Blog" description="Clint Losee Dev Blog" />
     <section className="blog-page">
       <Blogs title="Blog" posts={blogs} />
     </section>
