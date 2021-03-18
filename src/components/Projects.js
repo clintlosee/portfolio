@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 import Title from './Title'
 import Project from './Project'
 
+const ProjectsStyles = styled.section`
+  background: var(--clr-grey-10);
+`
+
 const Projects = ({ projects, title, showLink }) => (
-  <section className="section projects">
+  <ProjectsStyles className="section projects">
     <Title title={title} />
     <div className="section-center projects-center">
       {projects.map((project, index) => (
@@ -17,7 +22,7 @@ const Projects = ({ projects, title, showLink }) => (
         projects
       </Link>
     )}
-  </section>
+  </ProjectsStyles>
 )
 
 Projects.propTypes = {

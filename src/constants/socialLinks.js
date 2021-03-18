@@ -6,6 +6,25 @@ import {
   FaTwitterSquare,
   FaGithubSquare,
 } from 'react-icons/fa'
+import styled from 'styled-components'
+
+const SocialLinksStyles = styled.ul`
+  margin-top: 3.2rem;
+  width: 24rem;
+  display: flex;
+  justify-content: space-between;
+`
+
+const SocialLink = styled.li`
+  .social-link {
+    font-size: 2.8rem;
+    color: var(--clr-grey-1);
+    transition: var(--transition);
+  }
+  .social-link:hover {
+    color: var(--clr-primary-5);
+  }
+`
 
 const data = [
   {
@@ -35,13 +54,17 @@ const data = [
   },
 ]
 const links = data.map(link => (
-  <li key={link.id}>
+  <SocialLink key={link.id}>
     <a href={link.url} target="_blank" rel="noreferrer" className="social-link">
       {link.icon}
     </a>
-  </li>
+  </SocialLink>
 ))
 
 export default function SocialLinks({ styleClass }) {
-  return <ul className={`social-links ${styleClass || ''}`}>{links}</ul>
+  return (
+    <SocialLinksStyles className={`social-links ${styleClass || ''}`}>
+      {links}
+    </SocialLinksStyles>
+  )
 }

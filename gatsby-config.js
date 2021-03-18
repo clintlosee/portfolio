@@ -11,7 +11,7 @@ dotenv.config({ path: '.env' })
 module.exports = {
   siteMetadata: {
     title: 'Clint Losee Dev Portfolio',
-    description: 'This is the Portfolio Site of Clint Losee',
+    description: 'This is the Development Portfolio Site of Clint Losee',
     author: '@clintlosee',
     twitterUsername: '@ClintLosee',
     image: '/twitter-img.png',
@@ -34,8 +34,8 @@ module.exports = {
       options: {
         apiURL:
           process.env.NODE_ENV === 'development'
-            ? `http://localhost:1337`
-            : 'https://cl-portfolio-api.herokuapp.com',
+            ? process.env.DEV_API_URL
+            : process.env.PROD_API_URL,
         queryLimit: 5000, // Default to 100
         //   contentTypes : `jobs`, `projects`, `blogs`,
         //   singleType : `about`

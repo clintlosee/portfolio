@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
+import GlobalStyles from '../styles/GlobalStyles'
+import Typography from '../styles/Typography'
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -13,6 +15,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <GlobalStyles />
+      <Typography />
       <Navbar toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
       {children}
