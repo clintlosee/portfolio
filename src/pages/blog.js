@@ -1,9 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import Layout from '../components/Layout'
 import Blogs from '../components/Blogs'
 import SEO from '../components/SEO'
+import { PageStyles } from '../styles/PageStyles'
+
+const BlogPageStyles = styled.section`
+  .blog {
+    background: var(--clr-white);
+    border: 10px solid red;
+  }
+`
 
 const BlogPage = ({
   data: {
@@ -12,9 +21,11 @@ const BlogPage = ({
 }) => (
   <Layout>
     <SEO title="Blog" description="Clint Losee Dev Blog" />
-    <section className="blog-page">
-      <Blogs title="Blog" posts={blogs} />
-    </section>
+    <PageStyles>
+      <BlogPageStyles className="blog-page1">
+        <Blogs title="Blog" posts={blogs} />
+      </BlogPageStyles>
+    </PageStyles>
   </Layout>
 )
 

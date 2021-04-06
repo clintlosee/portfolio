@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Projects from '../components/Projects'
 import SEO from '../components/SEO'
+import { PageStyles } from '../styles/PageStyles'
 
 const ProjectsPage = ({
   data: {
@@ -12,9 +13,11 @@ const ProjectsPage = ({
 }) => (
   <Layout>
     <SEO title="Projects" description="Clint Losee Dev Projects" />
-    <section className="projects-page">
-      <Projects title="All Projects" projects={projects} />
-    </section>
+    <PageStyles>
+      <section className="projects-page">
+        <Projects title="All Projects" projects={projects} />
+      </section>
+    </PageStyles>
   </Layout>
 )
 

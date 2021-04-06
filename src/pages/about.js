@@ -6,6 +6,7 @@ import Image from 'gatsby-image'
 import Layout from '../components/Layout'
 import Title from '../components/Title'
 import SEO from '../components/SEO'
+import { PageStyles } from '../styles/PageStyles'
 
 const About = ({
   data: {
@@ -17,24 +18,29 @@ const About = ({
   return (
     <Layout>
       <SEO title="About" description="About Clint Losee" />
-      <section className="about-page">
-        <div className="section-center about-center">
-          {image && (
-            <Image fluid={image.childImageSharp.fluid} className="about-img" />
-          )}
-          <article className="about-text">
-            <Title title={title} />
-            <ReactMarkdown source={info} />
+      <PageStyles>
+        <section className="about-page1">
+          <div className="section-center about-center">
+            {image && (
+              <Image
+                fluid={image.childImageSharp.fluid}
+                className="about-img"
+              />
+            )}
+            <article className="about-text">
+              <Title title={title} />
+              <ReactMarkdown source={info} />
 
-            <div className="about-stack">
-              <h3>Skills</h3>
-              {stack.map(item => (
-                <span key={item.id}>{item.title}</span>
-              ))}
-            </div>
-          </article>
-        </div>
-      </section>
+              <div className="about-stack">
+                <h3>Skills</h3>
+                {stack.map(item => (
+                  <span key={item.id}>{item.title}</span>
+                ))}
+              </div>
+            </article>
+          </div>
+        </section>
+      </PageStyles>
     </Layout>
   )
 }

@@ -17,7 +17,7 @@ const query = graphql`
 `
 
 const HeroStyles = styled.header`
-  margin-top: -5rem;
+  margin-top: -8rem;
   padding-top: 8rem;
   height: 100vh;
   background: var(--clr-primary-10);
