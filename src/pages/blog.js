@@ -10,7 +10,6 @@ import { PageStyles } from '../styles/PageStyles'
 const BlogPageStyles = styled.section`
   .blog {
     background: var(--clr-white);
-    border: 10px solid red;
   }
 `
 
