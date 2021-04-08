@@ -24,7 +24,7 @@ const Typography = style.createGlobalStyle`
     font-size: 1.4rem;
   }
   p {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
     color: var(--clr-grey-3);
   }
   @media screen and (min-width: 800px) {

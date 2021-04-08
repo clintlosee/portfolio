@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-// import { PageStyles } from '../styles/PageStyles'
 
 const ErrorPageStyles = styled.main`
   background: var(--clr-grey-10);

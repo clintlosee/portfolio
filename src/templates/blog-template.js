@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import { PageStyles } from '../styles/PageStyles'
 
 const ComponentName = ({ data }) => {
   const { content, title, description } = data.blog
@@ -10,16 +11,18 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <section className="blog-template">
-        <div className="section-center">
-          <article className="blog-content">
-            <ReactMarkdown source={content} />
-          </article>
-          <Link to="/blog" className="btn center-btn">
-            blog
-          </Link>
-        </div>
-      </section>
+      <PageStyles>
+        <section className="blog-template">
+          <div className="section-center">
+            <article className="blog-content">
+              <ReactMarkdown source={content} />
+            </article>
+            <Link to="/blog" className="btn center-btn">
+              blog
+            </Link>
+          </div>
+        </section>
+      </PageStyles>
     </Layout>
   )
 }
