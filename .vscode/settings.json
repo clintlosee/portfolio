@@ -13,7 +13,10 @@
     "activityBarBadge.foreground": "#15202b",
     "statusBar.background": "#ff6600",
     "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#cc5200"
+    "statusBarItem.hoverBackground": "#cc5200",
+    "sash.hoverBorder": "#ff8533",
+    "statusBarItem.remoteBackground": "#ff6600",
+    "statusBarItem.remoteForeground": "#15202b"
   },
   // These are the auto-save configs
   "editor.formatOnSave": true,

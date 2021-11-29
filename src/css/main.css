@@ -11,7 +11,7 @@ Variables
 ===============
 */
 
-:root {
+/* :root { */
   /* primary orange color */
   /* --clr-primary-1: 	hsl(24, 100%, 50%);
   --clr-primary-2: 	hsl(25, 84%, 25%);
@@ -61,7 +61,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 700px; */
-}
+/* } */
 /*
 ===============
 Global Styles
