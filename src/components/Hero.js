@@ -1,20 +1,20 @@
 import React from 'react'
 import Image from 'gatsby-image'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+// import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import SocialLinks from '../constants/socialLinks'
 
-const query = graphql`
-  {
-    file(relativePath: { eq: "hero-img1.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     file(relativePath: { eq: "hero-img1.png" }) {
+//       childImageSharp {
+//         fluid {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `
 
 const HeroStyles = styled.header`
   margin-top: -8rem;

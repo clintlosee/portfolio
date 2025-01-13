@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// import PropTypes from 'prop-types'
+// import { graphql } from 'gatsby'
 import ReactMarkdown from 'react-markdown'
 import Image from 'gatsby-image'
 import styled from 'styled-components'
@@ -8,6 +8,7 @@ import Layout from '../components/Layout'
 import Title from '../components/Title'
 import SEO from '../components/SEO'
 import { PageStyles } from '../styles/PageStyles'
+import data from '../json/data.json'
 
 const AboutPageStyles = styled.section`
   padding: 11.2rem 0;
@@ -75,12 +76,8 @@ const AboutPageStyles = styled.section`
   }
 `
 
-const About = ({
-  data: {
-    about: { nodes },
-  },
-}) => {
-  const { title, info, stack, image } = nodes[0]
+const About = () => {
+  const { title, info, stack, image } = data.about
 
   return (
     <Layout>
@@ -112,34 +109,34 @@ const About = ({
   )
 }
 
-export const query = graphql`
-  {
-    about: allStrapiAbout {
-      nodes {
-        stack {
-          id
-          title
-        }
-        info
-        title
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     about: allStrapiAbout {
+//       nodes {
+//         stack {
+//           id
+//           title
+//         }
+//         info
+//         title
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
-About.propTypes = {
-  title: PropTypes.string,
-  info: PropTypes.string,
-  image: PropTypes.object,
-  stack: PropTypes.arrayOf(PropTypes.object),
-  data: PropTypes.object,
-}
+// About.propTypes = {
+//   title: PropTypes.string,
+//   info: PropTypes.string,
+//   image: PropTypes.object,
+//   stack: PropTypes.arrayOf(PropTypes.object),
+//   data: PropTypes.object,
+// }
 
 export default About

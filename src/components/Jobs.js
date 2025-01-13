@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaAngleDoubleRight } from 'react-icons/fa'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import Title from './Title'
+import data from '../json/data.json'
 
 const JobContainerStyles = styled.div`
   width: 80vw;
@@ -87,27 +88,28 @@ const JobStyles = styled.article`
   }
 `
 
-const query = graphql`
-  {
-    allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
-      nodes {
-        strapiId
-        date
-        company
-        position
-        description {
-          id
-          name
-        }
-      }
-    }
-  }
-`
+// const query = graphql`
+//   {
+//     allStrapiJobs(sort: { fields: strapiId, order: DESC }) {
+//       nodes {
+//         strapiId
+//         date
+//         company
+//         position
+//         description {
+//           id
+//           name
+//         }
+//       }
+//     }
+//   }
+// `
 
 const Jobs = () => {
-  const {
-    allStrapiJobs: { nodes: jobs },
-  } = useStaticQuery(query)
+  // const {
+  //   allStrapiJobs: { nodes: jobs },
+  // } = useStaticQuery(query)
+  const { jobs } = data
   const [value, setValue] = React.useState(0)
   const { company, position, date, description } = jobs[value]
 

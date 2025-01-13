@@ -46,14 +46,13 @@ const BlogTemplateStyles = styled.section`
   }
 `
 
-const ComponentName = ({ data }) => {
-  const { content, title, description } = data.blog
+const ComponentName = () => (
+  // const { content, title, description } = data.blog
 
-  return (
-    <Layout>
-      <SEO title={title} description={description} />
-      <PageStyles>
-        <BlogTemplateStyles className="blog-template">
+  <Layout>
+    {/* <SEO title={title} description={description} /> */}
+    <PageStyles>
+      {/* <BlogTemplateStyles className="blog-template">
           <div className="section-center">
             <article className="blog-content">
               <ReactMarkdown source={content} />
@@ -62,20 +61,19 @@ const ComponentName = ({ data }) => {
               blog
             </Link>
           </div>
-        </BlogTemplateStyles>
-      </PageStyles>
-    </Layout>
-  )
-}
+        </BlogTemplateStyles> */}
+    </PageStyles>
+  </Layout>
+)
 
-export const query = graphql`
-  query GetSingleBlog($slug: String) {
-    blog: strapiBlogs(slug: { eq: $slug }) {
-      content
-      title
-      description
-    }
-  }
-`
+// export const query = graphql`
+//   query GetSingleBlog($slug: String) {
+//     blog: strapiBlogs(slug: { eq: $slug }) {
+//       content
+//       title
+//       description
+//     }
+//   }
+// `
 
 export default ComponentName

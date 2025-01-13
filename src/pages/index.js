@@ -1,15 +1,17 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 // import Services from '../components/Services'
 import Jobs from '../components/Jobs'
-import Projects from '../components/Projects'
-import Blogs from '../components/Blogs'
+// import Projects from '../components/Projects'
+// import Blogs from '../components/Blogs'
 import SEO from '../components/SEO'
 
 import data from '../json/data.json'
+
+console.log('data:', data)
 
 export default function IndexPage() {
   // const {
@@ -17,8 +19,8 @@ export default function IndexPage() {
   //   // allStrapiBlogs: { nodes: blogs },
   // } = data
 
-  const projects = data.allStrapiProjects.nodes
-  const blogs = data.allStrapiBlogs.nodes
+  // const projects = data.allStrapiProjects.nodes
+  // const blogs = data.allStrapiBlogs.nodes
   return (
     <Layout>
       <SEO title="Home" description="Clint.tech Home Page" />
