@@ -7,6 +7,18 @@ yarn-error.log*
 
 /public
 
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Misc
+.fleet
+.idea
+
 # Runtime data
 pids
 *.pid
@@ -55,6 +67,11 @@ typings/
 
 # dotenv environment variable files
 .env*
+
+# Local env files
+.env
+.env.*
+!.env.example
 
 # gatsby files
 .cache/
