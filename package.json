@@ -6,7 +6,7 @@
   "author": "Clint Losee <clint.losee@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+   "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && gatsby build",
     "dev": "gatsby develop",
     "cleandev": "gatsby clean && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
