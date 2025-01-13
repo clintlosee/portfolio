@@ -29,21 +29,21 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
-    {
-      resolve: `gatsby-source-strapi`,
-      options: {
-        apiURL:
-          process.env.NODE_ENV === 'development'
-            ? process.env.DEV_API_URL
-            : process.env.PROD_API_URL,
-        queryLimit: 5000, // Default to 100
-        //   contentTypes : `jobs`, `projects`, `blogs`,
-        //   singleType : `about`
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`jobs`, `projects`, `blogs`],
-        singleTypes: [`about`],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL:
+    //       process.env.NODE_ENV === 'development'
+    //         ? process.env.DEV_API_URL
+    //         : process.env.PROD_API_URL,
+    //     queryLimit: 5000, // Default to 100
+    //     //   contentTypes : `jobs`, `projects`, `blogs`,
+    //     //   singleType : `about`
+    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+    //     contentTypes: [`jobs`, `projects`, `blogs`],
+    //     singleTypes: [`about`],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-webfonts`,
       options: {

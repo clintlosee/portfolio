@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 // import Services from '../components/Services'
@@ -9,11 +9,16 @@ import Projects from '../components/Projects'
 import Blogs from '../components/Blogs'
 import SEO from '../components/SEO'
 
-export default function IndexPage({ data }) {
-  const {
-    allStrapiProjects: { nodes: projects },
-    allStrapiBlogs: { nodes: blogs },
-  } = data
+import data from '../json/data.json'
+
+export default function IndexPage() {
+  // const {
+  //   // allStrapiProjects: { nodes: projects },
+  //   // allStrapiBlogs: { nodes: blogs },
+  // } = data
+
+  const projects = data.allStrapiProjects.nodes
+  const blogs = data.allStrapiBlogs.nodes
   return (
     <Layout>
       <SEO title="Home" description="Clint.tech Home Page" />
@@ -22,55 +27,55 @@ export default function IndexPage({ data }) {
         // <Services />
       }
       <Jobs />
-      <Projects projects={projects} title="Featured Projects" showLink />
-      <Blogs posts={blogs} title="Latest Posts" showLink />
+      {/* <Projects projects={projects} title="Featured Projects" showLink /> */}
+      {/* <Blogs posts={blogs} title="Latest Posts" showLink /> */}
     </Layout>
   )
 }
 
-export const query = graphql`
-  {
-    allStrapiProjects(filter: { featured: { eq: true } }) {
-      nodes {
-        id
-        title
-        url
-        github
-        description
-        stack {
-          id
-          title
-        }
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-    allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
-      nodes {
-        slug
-        content
-        description
-        date(formatString: "MMMM Do, YYYY")
-        id
-        title
-        category
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allStrapiProjects(filter: { featured: { eq: true } }) {
+//       nodes {
+//         id
+//         title
+//         url
+//         github
+//         description
+//         stack {
+//           id
+//           title
+//         }
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//     allStrapiBlogs(sort: { fields: date, order: DESC }, limit: 3) {
+//       nodes {
+//         slug
+//         content
+//         description
+//         date(formatString: "MMMM Do, YYYY")
+//         id
+//         title
+//         category
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
-IndexPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+// IndexPage.propTypes = {
+//   data: PropTypes.object.isRequired,
+// }

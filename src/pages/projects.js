@@ -5,49 +5,49 @@ import Layout from '../components/Layout'
 import Projects from '../components/Projects'
 import SEO from '../components/SEO'
 import { PageStyles } from '../styles/PageStyles'
+import data from '../json/data.json'
 
-const ProjectsPage = ({
-  data: {
-    allStrapiProjects: { nodes: projects },
-  },
-}) => (
+const ProjectsPage = () => (
   <Layout>
     <SEO title="Projects" description="Clint Losee Dev Projects" />
     <PageStyles>
       <section className="projects-page">
-        <Projects title="All Projects" projects={projects} />
+        <Projects
+          title="All Projects"
+          projects={data.allStrapiProjects.nodes}
+        />
       </section>
     </PageStyles>
   </Layout>
 )
 
-export const query = graphql`
-  {
-    allStrapiProjects {
-      nodes {
-        id
-        title
-        url
-        github
-        description
-        stack {
-          id
-          title
-        }
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allStrapiProjects {
+//       nodes {
+//         id
+//         title
+//         url
+//         github
+//         description
+//         stack {
+//           id
+//           title
+//         }
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
-ProjectsPage.propTypes = {
-  data: PropTypes.object,
-}
+// ProjectsPage.propTypes = {
+//   data: PropTypes.object,
+// }
 
 export default ProjectsPage
